@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :click_data, except: [:new, :edit]
   scope '/api' do
     resources :groups, except: [:new, :edit]
   end
