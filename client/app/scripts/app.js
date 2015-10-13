@@ -14,7 +14,8 @@ var app = angular.module('fakeLunchHubApp', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'app.clickdata'
   ]);
 
   app.config(function ($routeProvider) {

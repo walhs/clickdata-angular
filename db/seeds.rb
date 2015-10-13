@@ -11,3 +11,8 @@ Group.create([
   { name: 'GloboChem' },
   { name: 'TechCorp' },
 ])
+
+ClickData.create([
+	{ user_token: 'gordinho', x: 0, y:20.0, scroll_position: 234, url:"localhost:9000" },
+	{ user_token: 'gordinha', x: 10, y:40.0, scroll_position: 532, url:"localhost:3000" },
+])

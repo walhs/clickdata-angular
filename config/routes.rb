@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :click_data, except: [:new, :edit]
+
   scope '/api' do
+    resources :click_data, except: [:new, :edit]
     resources :groups, except: [:new, :edit]
   end
   # The priority is based upon order of creation: first created -> highest priority.

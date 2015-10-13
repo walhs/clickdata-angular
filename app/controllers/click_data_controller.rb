@@ -1,10 +1,10 @@
 class ClickDataController < ApplicationController
-  before_action :set_click_datum, only: [:show, :update, :destroy]
+  before_action :set_click_data, only: [:show, :update, :destroy]
 
   # GET /click_data
   # GET /click_data.json
   def index
-    @click_data = ClickDatum.all
+    @click_data = ClickData.all
 
     render json: @click_data
   end
@@ -12,48 +12,48 @@ class ClickDataController < ApplicationController
   # GET /click_data/1
   # GET /click_data/1.json
   def show
-    render json: @click_datum
+    render json: @click_data
   end
 
   # POST /click_data
   # POST /click_data.json
   def create
-    @click_datum = ClickDatum.new(click_datum_params)
+    @click_data = ClickData.new(click_data_params)
 
-    if @click_datum.save
-      render json: @click_datum, status: :created, location: @click_datum
+    if @click_data.save
+      render json: @click_data, status: :created, location: @click_data
     else
-      render json: @click_datum.errors, status: :unprocessable_entity
+      render json: @click_data.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /click_data/1
   # PATCH/PUT /click_data/1.json
   def update
-    @click_datum = ClickDatum.find(params[:id])
+    @click_data = ClickData.find(params[:id])
 
-    if @click_datum.update(click_datum_params)
+    if @click_data.update(click_data_params)
       head :no_content
     else
-      render json: @click_datum.errors, status: :unprocessable_entity
+      render json: @click_data.errors, status: :unprocessable_entity
     end
   end
 
   # DELETE /click_data/1
   # DELETE /click_data/1.json
   def destroy
-    @click_datum.destroy
+    @click_data.destroy
 
     head :no_content
   end
 
   private
 
-    def set_click_datum
-      @click_datum = ClickDatum.find(params[:id])
+    def set_click_data
+      @click_data = ClickData.find(params[:id])
     end
 
-    def click_datum_params
-      params.require(:click_datum).permit(:user_token, :x, :y, :scroll_position, :url)
+    def click_data_params
+      params.require(:click_data).permit(:user_token, :x, :y, :scroll_position, :url)
     end
 end
