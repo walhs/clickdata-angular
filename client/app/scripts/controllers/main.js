@@ -1,17 +1,20 @@
-'use strict';
-
 /**
- * @ngdoc function
- * @name fakeLunchHubApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the fakeLunchHubApp
- */
-angular.module('fakeLunchHubApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+	 * @ngdoc function
+	 * @name fakeLunchHubApp.controller:MainCtrl
+	 * @description
+	 * # MainCtrl
+	 * Controller of the fakeLunchHubApp
+	 */
+
+(function () {
+
+	'use strict';
+
+	angular.module('trackerApp')
+	  .controller('MainCtrl', MainCtrl); 
+	  	
+	function MainCtrl() {
+		var vc = this;
+	}
+
+})();

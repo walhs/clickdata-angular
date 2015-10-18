@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-var app = angular.module('fakeLunchHubApp', [
+var app = angular.module('trackerApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -25,22 +25,17 @@ var app = angular.module('fakeLunchHubApp', [
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LogInCtrl',
+        controllerAs: 'login'
       })
-      .when('/groups', {
-        templateUrl: 'views/groups.html',
-        controller: 'GroupsCtrl'
+      .when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'RegisterCtrl',
+        controllerAs: 'register'
       })
       .otherwise({
         redirectTo: '/'
       });
   });
-
-  app.factory('Group', ['$resource', function($resource) {
-    return $resource('/api/groups/:id.json', null, {
-      'update': { method:'PUT' }
-    });
-  }]);

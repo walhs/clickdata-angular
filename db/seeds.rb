@@ -5,14 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Group.create([
-  { name: 'Ben Franklin Labs' },
-  { name: 'Snip Salon Software' },
-  { name: 'GloboChem' },
-  { name: 'TechCorp' },
-])
+
 
 ClickData.create([
-	{ user_token: 'gordinho', x: 0, y:20.0, scroll_position: 234, url:"localhost:9000" },
-	{ user_token: 'gordinha', x: 10, y:40.0, scroll_position: 532, url:"localhost:3000" },
+	{ user_token: 'user_1', x: 0, y:20.0, scroll_position: 234, url:"localhost:9000" },
+	{ user_token: 'user_2', x: 10, y:40.0, scroll_position: 532, url:"localhost:3000" },
 ])
