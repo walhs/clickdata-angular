@@ -15,7 +15,9 @@ var app = angular.module('trackerApp', [
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'app.clickdata'
+    'trackerApp.auth',
+    'trackerApp.clickdata',
+    'trackerApp.header'
   ]);
 
   app.config(function ($routeProvider) {

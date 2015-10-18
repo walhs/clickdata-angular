@@ -1,5 +1,5 @@
 angular
- 	.module('app.clickdata')
+ 	.module('trackerApp.clickdata')
  	.factory('clickDataApi', clickDataApi);
 
 clickDataApi.$inject = [

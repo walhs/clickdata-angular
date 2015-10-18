@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.clickdata')
+angular.module('trackerApp.clickdata')
   .controller('listClickdataController', listClickdataController);
 
 listClickdataController.$inject = [

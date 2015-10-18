@@ -1,4 +1,4 @@
-angular.module('app.clickdata').config(function ($routeProvider) {
+angular.module('trackerApp.clickdata').config(function ($routeProvider) {
     $routeProvider
       .when('/clickdata/list', {
         templateUrl: 'views/listClickData.html',

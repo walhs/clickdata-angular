@@ -1,5 +1,5 @@
 angular
-	.module('app.clickdata')
+	.module('trackerApp.clickdata')
 	.factory('listClickDataService', listClickDataService);
 
 listClickDataService.$inject = [

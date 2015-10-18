@@ -1,1 +1,3 @@
-angular.module('app.clickdata', ['appajax']);
+(function () {
+	angular.module('trackerApp.clickdata', ['appajax']);
+})();

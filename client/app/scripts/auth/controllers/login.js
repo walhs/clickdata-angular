@@ -14,7 +14,7 @@
 
 	'use strict';
 
-	angular.module('trackerApp')
+	angular.module('trackerApp.auth')
 	  .controller('LogInCtrl', LogInCtrl);
 
   function LogInCtrl () {
