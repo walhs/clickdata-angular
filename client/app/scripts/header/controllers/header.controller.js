@@ -6,7 +6,7 @@
 		.module('trackerApp.header')
 		.controller('HeaderCtrl', HeaderCtrl);
 
-	angular.$inject = [
+	HeaderCtrl.$inject = [
 		'HeaderService'
 	]
 
