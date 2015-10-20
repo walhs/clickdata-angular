@@ -3,8 +3,8 @@
 	'use strict';
 
 	angular
-		.module('trackerApp')
-		.directive('header', [header]);
+		.module('trackerApp.header')
+		.directive('header', header);
 
 	function header () {
 		return {
@@ -16,4 +16,4 @@
 			//controllerAs: 'vc'  
 		}
 	}
-});
+})();

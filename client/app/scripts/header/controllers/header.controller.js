@@ -4,7 +4,7 @@
 
 	angular
 		.module('trackerApp.header')
-		.controller(HeaderCtrl, 'HeaderCtrl');
+		.controller('HeaderCtrl', HeaderCtrl);
 
 	angular.$inject = [
 		'HeaderService'
@@ -14,4 +14,4 @@
 		var vc = this;
 		vc.vm = HeaderService;
 	}
-});
+})();

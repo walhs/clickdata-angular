@@ -2,8 +2,8 @@
 	'use strict';
 
 	angular
-	.module('trackerApp')
-	.factory('HeaderService', [HeaderService]);
+	.module('trackerApp.header')
+	.factory('HeaderService', HeaderService);
 
 	function HeaderService () {
 		var vm = {
@@ -13,7 +13,7 @@
 		return vm;
 
 		function init () {
-			
+
 		}
 	}
-});
+})();
