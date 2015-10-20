@@ -26,19 +26,19 @@ var app = angular.module('trackerApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main',
-        activeTab: 'main'
+        activetab: 'main'
       })
       .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LogInCtrl',
         controllerAs: 'login',
-        activeTab: 'login'
+        activetab: 'login'
       })
       .when('/register', {
         templateUrl: 'views/register.html',
         controller: 'RegisterCtrl',
         controllerAs: 'register',
-        activeTab: 'register'
+        activetab: 'register'
       })
       .otherwise({
         redirectTo: '/'

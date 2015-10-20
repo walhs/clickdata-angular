@@ -10,7 +10,7 @@
 		'HeaderService'
 	]
 
-	function HeaderCtrl (HeaderService, $route) {
+	function HeaderCtrl ($route, HeaderService) {
 		var vc = this;
 		vc.vm = HeaderService;
 		vc.route = $route;
