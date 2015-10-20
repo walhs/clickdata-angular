@@ -20,29 +20,14 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#/">Tracker</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/login">Log In</a></li>
-              <li><a ng-href="#/register">Register</a></li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </div>
+    <!--Header-->
+    <header></header>
 
     <div class="container">
     <div ng-view=""></div>
     </div>
-
+    
+    <!--Footer-->
     <div class="footer">
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
@@ -86,11 +71,14 @@
         <script src="scripts/click-data/controllers/list-clickdata.controller.js"></script>
 
         <script src="scripts/auth/auth.module.js"></script>
-        <script src="scripts/auth/services/controllers/main.js"></script>
         <script src="scripts/auth/controllers/register.js"></script>
         <script src="scripts/auth/controllers/login.js"></script>
 
         <script src="scripts/header/header.module.js"></script>
+        <script src="scripts/header/services/header.service.js"></script>
+        <script src="scripts/header/directives/header.directive.js"></script>
+        <script src="scripts/header/directives/header.directive.html"></script>
+        <script src="scripts/header/controllers/header.controller.js"></script>
         <script src="scripts/main.js"></script>
         <script src="scripts/app.js"></script>
   
