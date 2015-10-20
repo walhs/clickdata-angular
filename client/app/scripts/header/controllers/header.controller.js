@@ -4,14 +4,15 @@
 
 	angular
 		.module('trackerApp.header')
-		.controller('HeaderCtrl', HeaderCtrl);
+		.controller('HeaderCtrl', ['$route', HeaderCtrl]);
 
 	HeaderCtrl.$inject = [
 		'HeaderService'
 	]
 
-	function HeaderCtrl (HeaderService) {
+	function HeaderCtrl (HeaderService, $route) {
 		var vc = this;
 		vc.vm = HeaderService;
+		vc.route = $route;
 	}
 })();
