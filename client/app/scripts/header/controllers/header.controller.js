@@ -4,15 +4,14 @@
 
 	angular
 		.module('trackerApp.header')
-		.controller('HeaderCtrl', ['$route', HeaderCtrl]);
+		.controller('HeaderCtrl', [HeaderCtrl]);
 
 	HeaderCtrl.$inject = [
-		'HeaderService'
+		'AuthService'
 	]
 
-	function HeaderCtrl ($route, HeaderService) {
+	function HeaderCtrl (AuthService) {
 		var vc = this;
-		vc.vm = HeaderService;
-		vc.route = $route;
+		vc.auth = AuthService;
 	}
 })();

@@ -40,6 +40,24 @@ var app = angular.module('trackerApp', [
         controllerAs: 'register',
         activetab: 'register'
       })
+      .when('/addPost', {
+        templateUrl: 'views/post.html',
+        controller: 'PostCtrl',
+        controllerAs: 'post',
+        activetab: 'addPost'
+      })
+      .when('/profile', {
+        templateUrl: 'views/profile.html',
+        controller: 'ProfileCtrl',
+        controllerAs: 'profile',
+        activetab: 'profile'
+      })
+      // .when('/logout', {
+      //   templateUrl: 'views/logout.html',
+      //   controller: 'LogOutCtrl',
+      //   controllerAs: 'logout',
+      //   activetab: 'logout'
+      // })
       .otherwise({
         redirectTo: '/'
       });
