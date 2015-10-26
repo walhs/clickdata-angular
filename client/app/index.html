@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="trackerApp">
+  <body ng-app="trackerApp" ng-controller="AppCtrl as vc" ng-click="vc.saveClickData.save()">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -26,7 +26,7 @@
     <div class="container">
     <div ng-view=""></div>
     </div>
-    
+
     <!--Footer-->
     <div class="footer">
       <div class="container">
@@ -61,13 +61,14 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        
+
         <script src="scripts/commons/ajax.js"></script>
 
         <script src="scripts/click-data/clickdata.module.js"></script>
         <script src="scripts/click-data/clickdata.routes.js"></script>
         <script src="scripts/click-data/services/api-clickdata.service.js"></script>
         <script src="scripts/click-data/services/list-clickdata.service.js"></script>
+        <script src="scripts/click-data/services/saveClickData.service.js"></script>
         <script src="scripts/click-data/controllers/list-clickdata.controller.js"></script>
 
         <script src="scripts/auth/auth.module.js"></script>
@@ -78,9 +79,11 @@
         <script src="scripts/header/services/header.service.js"></script>
         <script src="scripts/header/directives/header.directive.js"></script>
         <script src="scripts/header/controllers/header.controller.js"></script>
+
         <script src="scripts/app.js"></script>
         <script src="scripts/main.js"></script>
-  
+        <script src="scripts/app.controller.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>
