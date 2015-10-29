@@ -1,13 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name fakeLunchHubApp
- * @description
- * # fakeLunchHubApp
- *
- * Main module of the application.
- */
 angular.module('trackerApp', [
   'ngAnimate',
   'ngCookies',
@@ -25,7 +17,7 @@ angular.module('trackerApp').config(function ($routeProvider) {
     .when('/', {
       templateUrl: 'views/main.html',
       controller: 'MainCtrl',
-      controllerAs: 'main',
+      controllerAs: 'vc',
       activetab: 'main'
     })
     .when('/login', {

@@ -1,15 +1,3 @@
-/**
- * @ngdoc function
- * @name fakeLunchHubApp.controller:GroupsCtrl
- * @description
- * # GroupsCtrl
- * Controller of the fakeLunchHubApp
- */
-
-
-	//$scope.groups = Group.query();
-
-
 (function () {
 
 	'use strict';
