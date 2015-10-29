@@ -20,11 +20,14 @@
           <li ng-class="{active: vc.route.current.activetab == 'main'}">
             <a href="#/">Home</a>
           </li>
-          <li ng-class="{active: vc.route.current.activetab == 'addPost'}">
+<!--           <li ng-class="{active: vc.route.current.activetab == 'addPost'}">
             <a ng-href="#/addPost">Add Post</a>
-          </li>
+          </li> -->
           <li ng-class="{active: vc.route.current.activetab == 'profile'}">
             <a ng-href="#/profile">Profile</a>
+          </li>
+          <li ng-class="{active: vc.route.current.activetab == 'settings'}">
+            <a ng-href="#/settings">Settings</a>
           </li>
           <li ng-class="{active: vc.route.current.activetab == 'logout'}">
             <a href ng-click="vc.logout()">Log Out</a>

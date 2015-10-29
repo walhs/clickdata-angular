@@ -5,6 +5,7 @@
 
   PostsCtrl.$inject = ['$scope'];
 
+  // Lugar errado - @Refactoring
   function PostsCtrl($scope) {
     var vc = this;
 

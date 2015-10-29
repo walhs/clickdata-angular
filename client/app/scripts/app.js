@@ -12,6 +12,7 @@ angular.module('trackerApp', [
   'trackerApp.header',
   'trackerApp.post',
   'trackerApp.profile',
+  'trackerApp.settings'
 ]);
 
 angular.module('trackerApp').config(function ($routeProvider) {
@@ -45,6 +46,12 @@ angular.module('trackerApp').config(function ($routeProvider) {
       controller: 'ProfileCtrl',
       controllerAs: 'vc',
       activetab: 'profile'
+    })
+    .when('/settings', {
+      templateUrl: 'views/settings.html',
+      controller: 'SettingsCtrl',
+      controllerAs: 'vc',
+      activetab: 'settings'
     })
     .otherwise({
       redirectTo: '/'
