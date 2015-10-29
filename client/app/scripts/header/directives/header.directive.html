@@ -27,7 +27,7 @@
             <a ng-href="#/profile">Profile</a>
           </li>
           <li ng-class="{active: vc.route.current.activetab == 'logout'}">
-            <a ng-href="#/logout">Log Out</a>
+            <a href ng-click="vc.logout()">Log Out</a>
           </li>
         </ul>
       </div>

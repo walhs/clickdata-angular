@@ -7,11 +7,17 @@
 		.controller('HeaderCtrl', HeaderCtrl);
 
 	HeaderCtrl.$inject = [
-		'AuthService'
+		'AuthService',
+		'$location'
 	]
 
-	function HeaderCtrl (AuthService) {
+	function HeaderCtrl (AuthService, $location) {
 		var vc = this;
 		vc.auth = AuthService;
+
+		vc.logout = function(){
+			vc.auth.logOut();
+			$location.path('#/');
+		}
 	}
 })();
