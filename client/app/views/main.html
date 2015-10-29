@@ -1,4 +1,4 @@
-<div class="jumbotron" ng-if="vc.auth.isUserLogged() === false">
+<div class="col-xs-6 col-sm-offset-2 col-md-offset-3 jumbotron" ng-if="vc.auth.isUserLogged() === false">
   <h1>Tracker</h1>
   <p class="lead">
     <img src="images/rato.jpg"><br>
@@ -10,5 +10,5 @@
     <posts posts="vc.vm.posts" ng-show="vc.vm.posts && vc.vm.posts.length"></posts>
     <a class="btn btn-primary btn-fab btn-raised mdi-content-add btn-add-new-post"
       href="javascript:void(0)"></a>
-    <div ng-if="vc.vm.posts.length === 0">Nenhum Post ainda</div>
+    <!-- <div ng-if="vc.vm.posts.length === 0">Nenhum Post ainda</div> -->
 </div>

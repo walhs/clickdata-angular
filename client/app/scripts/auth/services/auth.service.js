@@ -22,6 +22,8 @@
 			function logIn(email, password){
 				vm.loggedUser = {
 					name: 'jumento celestino',
+					username: 'jumentocelestino',
+					tagline: 'sou um jumento',
 					email: email
 				};
 			}

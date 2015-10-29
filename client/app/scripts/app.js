@@ -9,7 +9,9 @@ angular.module('trackerApp', [
   'ngTouch',
   'trackerApp.auth',
   'trackerApp.clickdata',
-  'trackerApp.header'
+  'trackerApp.header',
+  'trackerApp.post',
+  'trackerApp.profile',
 ]);
 
 angular.module('trackerApp').config(function ($routeProvider) {
@@ -41,7 +43,7 @@ angular.module('trackerApp').config(function ($routeProvider) {
     .when('/profile', {
       templateUrl: 'views/profile.html',
       controller: 'ProfileCtrl',
-      controllerAs: 'profile',
+      controllerAs: 'vc',
       activetab: 'profile'
     })
     .otherwise({

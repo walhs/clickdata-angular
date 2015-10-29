@@ -27,10 +27,14 @@
     <!--Header-->
     <header></header>
 
-    <div class="container">
+<!--     <div class="container">
     <div ng-view=""></div>
-    </div>
-
+    </div> -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 ng-view"></div>
+        </div>
+      </div>
     <!--Footer-->
     <div class="footer">
       <div class="container">
@@ -87,6 +91,14 @@
         <script src="scripts/header/services/header.service.js"></script>
         <script src="scripts/header/directives/header.directive.js"></script>
         <script src="scripts/header/controllers/header.controller.js"></script>
+
+        <script src="scripts/post/post.module.js"></script>
+        <script src="scripts/post/controllers/posts.controller.js"></script>
+        <script src="scripts/post/directives/post.directive.js"></script>
+        <script src="scripts/post/directives/posts.directive.js"></script>
+
+        <script src="scripts/profile/profile.module.js"></script>
+        <script src="scripts/profile/controllers/profile.controller.js"></script>
 
         <script src="scripts/app.js"></script>
         <script src="scripts/main.service.js"></script>

@@ -13,7 +13,15 @@
             return vm;
 
             function init() {
-                vm.posts = [];
+                // vm.posts = [];
+                vm.posts = [
+                    {
+                        author: {
+                            username: 'jumentocelestino'
+                        },
+                        content: 'Conteudo de um post'
+                    }
+                ];
             }
         }
 })();
