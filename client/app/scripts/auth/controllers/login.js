@@ -8,7 +8,7 @@
 
 
 	//$scope.groups = Group.query();
-	
+
 
 (function () {
 
@@ -17,8 +17,11 @@
 	angular.module('trackerApp.auth')
 	  .controller('LogInCtrl', LogInCtrl);
 
-  function LogInCtrl () {
+  function LogInCtrl (LoginService) {
  		var vc = this;
+
+        vc.vm = LoginService;
+        vc.vm.init();
   }
 
 })();

@@ -1,10 +1,10 @@
 (function () {
-	
+
 	'use strict';
 
 	angular
 		.module('trackerApp.header')
-		.controller('HeaderCtrl', [HeaderCtrl]);
+		.controller('HeaderCtrl', HeaderCtrl);
 
 	HeaderCtrl.$inject = [
 		'AuthService'
