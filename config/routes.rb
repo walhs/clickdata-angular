@@ -1,5 +1,38 @@
+# == Route Map
+#
+#                   Prefix Verb   URI Pattern                    Controller#Action
+#         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
+#             user_session POST   /users/sign_in(.:format)       devise/sessions#create
+#     destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy
+#            user_password POST   /users/password(.:format)      devise/passwords#create
+#        new_user_password GET    /users/password/new(.:format)  devise/passwords#new
+#       edit_user_password GET    /users/password/edit(.:format) devise/passwords#edit
+#                          PATCH  /users/password(.:format)      devise/passwords#update
+#                          PUT    /users/password(.:format)      devise/passwords#update
+# cancel_user_registration GET    /users/cancel(.:format)        devise/registrations#cancel
+#        user_registration POST   /users(.:format)               devise/registrations#create
+#    new_user_registration GET    /users/sign_up(.:format)       devise/registrations#new
+#   edit_user_registration GET    /users/edit(.:format)          devise/registrations#edit
+#                          PATCH  /users(.:format)               devise/registrations#update
+#                          PUT    /users(.:format)               devise/registrations#update
+#                          DELETE /users(.:format)               devise/registrations#destroy
+#               click_data GET    /api/click_data(.:format)      click_data#index
+#                          POST   /api/click_data(.:format)      click_data#create
+#              click_datum GET    /api/click_data/:id(.:format)  click_data#show
+#                          PATCH  /api/click_data/:id(.:format)  click_data#update
+#                          PUT    /api/click_data/:id(.:format)  click_data#update
+#                          DELETE /api/click_data/:id(.:format)  click_data#destroy
+#                   groups GET    /api/groups(.:format)          groups#index
+#                          POST   /api/groups(.:format)          groups#create
+#                    group GET    /api/groups/:id(.:format)      groups#show
+#                          PATCH  /api/groups/:id(.:format)      groups#update
+#                          PUT    /api/groups/:id(.:format)      groups#update
+#                          DELETE /api/groups/:id(.:format)      groups#destroy
+#
+
 Rails.application.routes.draw do
 
+  devise_for :users
   scope '/api' do
     resources :click_data, except: [:new, :edit]
     resources :groups, except: [:new, :edit]

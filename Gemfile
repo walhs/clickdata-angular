@@ -11,8 +11,14 @@ group :development, :test do
 	gem 'rspec-rails'
 end
 
+#PostgreSQL
 gem 'pg'
 
+#Devise for authentication
+gem 'devise'
+
+#Annotate for routes
+gem 'annotate'
 
 
 # To use ActiveModel has_secure_password
