@@ -1,17 +1,24 @@
 (function () {
-	
+
 	'use strict';
 
 	angular
 		.module('trackerApp.header')
-		.controller('HeaderCtrl', [HeaderCtrl]);
+		.controller('HeaderCtrl', HeaderCtrl);
 
 	HeaderCtrl.$inject = [
-		'AuthService'
+		'AuthService',
+		'$location'
 	]
 
-	function HeaderCtrl (AuthService) {
+	function HeaderCtrl (AuthService, $location) {
 		var vc = this;
 		vc.auth = AuthService;
+
+		// Lugar errado - @Refactoring
+		vc.logout = function(){
+			vc.auth.logOut();
+			$location.path('#/');
+		}
 	}
 })();

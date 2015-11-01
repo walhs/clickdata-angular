@@ -1,5 +1,5 @@
 (function () {
-	
+
 	'use strict'
 
 	angular
@@ -7,25 +7,33 @@
 		.factory('AuthService', AuthService);
 
 		function AuthService () {
-			var vm = init {
+			var vm = {
 				init: init,
+				logIn: logIn,
+				logOut: logOut,
+				isUserLogged: isUserLogged
 			};
 			return vm;
 
 			function init() {
-				var isLogged = false;
+				vm.loggedUser = null;
 			}
 
-			function logIn (){
-
+			function logIn(email, password){
+				vm.loggedUser = {
+					name: 'jumento celestino',
+					username: 'jumentocelestino',
+					tagline: 'sou um jumento',
+					email: email
+				};
 			}
 
-			function logOut () {
-
+			function logOut() {
+				vm.loggedUser = null;
 			}
 
-			function isUserLogged () {
-
+			function isUserLogged() {
+				return vm.loggedUser !== null;
 			}
 		}
 
