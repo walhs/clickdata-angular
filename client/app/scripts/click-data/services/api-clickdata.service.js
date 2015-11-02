@@ -1,27 +1,31 @@
-angular
- 	.module('trackerApp.clickdata')
- 	.factory('clickDataApi', clickDataApi);
+(function(){
+	'use strict';
 
-clickDataApi.$inject = [
-	'AppAjax'
-]
+	angular
+	 	.module('trackerApp.clickdata')
+	 	.factory('clickDataApi', clickDataApi);
 
-function clickDataApi(AppAjax){
-	var vm = {
-		list: list,
-		save: save
-	};
+	clickDataApi.$inject = [
+		'AppAjax'
+	]
 
-	return vm;
+	function clickDataApi(AppAjax){
+		var vm = {
+			list: list,
+			save: save
+		};
 
-	function list(){
-		return AppAjax.get('/api/click_data');
-	}
+		return vm;
 
-	function save(data) {
-		var params = {
-			click_data: data
+		function list(){
+			return AppAjax.get('/api/click_data');
 		}
-		return AppAjax.post('/api/click_data.json', params);
+
+		function save(data) {
+			var params = {
+				click_data: data
+			}
+			return AppAjax.post('/api/click_data.json', params);
+		}
 	}
-}
+})();

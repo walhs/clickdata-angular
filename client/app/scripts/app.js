@@ -60,4 +60,4 @@ angular.module('trackerApp').config(function ($routeProvider) {
 
 angular.module('trackerApp').run(function(AuthService){
   AuthService.init();
-})
+});

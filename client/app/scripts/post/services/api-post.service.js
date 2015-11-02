@@ -1,7 +1,9 @@
 (function(){
+    'use strict';
+
     angular
-    .module('trackerApp.post')
-    .factory('PostApi', PostApi);
+        .module('trackerApp.post')
+        .factory('PostApi', PostApi);
 
     PostApi.$inject = [
         'AppAjax'
@@ -27,8 +29,8 @@
             return AppAjax.post('/api/post.json', params);
         }
 
-        function upvote(post_id){
-            var upvote_url = '/posts/' + post_id + '/upvote.json';
+        function upvote(post){
+            var upvote_url = '/posts/' + post.id + '/upvote.json';
             return AppAjax.post(upvote_url);
         }
     }
