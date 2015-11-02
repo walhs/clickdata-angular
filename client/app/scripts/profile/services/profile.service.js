@@ -6,10 +6,11 @@
         .factory('ProfileService', ProfileService);
 
     ProfileService.$inject = [
-        'UserApi'
+        'UserApi',
+        'PostsService'
     ]
 
-    function ProfileService(UserApi){
+    function ProfileService(UserApi, PostsService){
         var vm = {
             init: init,
         };
@@ -20,6 +21,11 @@
             vm.user = null;
             UserApi.get(user_id).success(function(user){
                 vm.user = user;
+                vm.user.posts.map(function(p){
+                    p.username = user.username;
+                    p.user_id = user.id;
+                });
+                PostsService.setPosts(vm.user.posts);
             })
         }
     }
