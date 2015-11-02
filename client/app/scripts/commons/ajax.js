@@ -1,7 +1,7 @@
 (function(){
     "use strict";
 
-    angular.module('appajax', []);
+    angular.module('appajax', ['trackerApp.auth']);
 
     angular.module('appajax').config(
         function($httpProvider){
@@ -17,7 +17,7 @@
         }
     );
 
-    angular.module('appajax').factory('AppAjax', function($http){
+    angular.module('appajax').factory('AppAjax', function($http, AuthService){
 
         var AppAjax = {
             get: get,
@@ -31,6 +31,10 @@
                 params = {};
             }
 
+            if(AuthService.loggedUser){
+                params.user_id = AuthService.loggedUser.id
+            }
+
             var promise = $http({
                 method: 'GET',
                 url: url,
@@ -42,6 +46,10 @@
         function post(url, params){
             if(!params){
                 params = {};
+            }
+
+            if(AuthService.loggedUser){
+                params.user_id = AuthService.loggedUser.id
             }
 
             var promise = $http({

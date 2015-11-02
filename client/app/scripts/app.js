@@ -36,12 +36,6 @@ angular.module('trackerApp').config(function ($routeProvider) {
       controllerAs: 'vc',
       activetab: 'register'
     })
-    .when('/profile', {
-      templateUrl: 'views/profile.html',
-      controller: 'ProfileCtrl',
-      controllerAs: 'vc',
-      activetab: 'profile'
-    })
     .when('/settings', {
       templateUrl: 'views/settings.html',
       controller: 'SettingsCtrl',

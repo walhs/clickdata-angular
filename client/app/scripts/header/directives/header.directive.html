@@ -24,7 +24,7 @@
             <a href="#/">Home</a>
           </li>
           <li ng-class="{active: vc.route.current.activetab == 'profile'}">
-            <a ng-href="#/profile">Profile</a>
+            <a ng-href="#/profile/{{vc.auth.loggedUser.id}}">Profile</a>
           </li>
           <li ng-class="{active: vc.route.current.activetab == 'settings'}">
             <a ng-href="#/settings">Settings</a>

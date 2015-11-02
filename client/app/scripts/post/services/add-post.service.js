@@ -6,10 +6,12 @@
         .factory('AddPostService', AddPostService);
 
     AddPostService.$inject = [
-        'PostApi'
+        'PostApi',
+        '$location',
+        'AuthService'
     ]
 
-    function AddPostService(PostApi){
+    function AddPostService(PostApi, $location, AuthService){
         var vm = {
             init: init,
             savePost: savePost
@@ -29,7 +31,8 @@
             vm.saving = true;
             PostApi.save(post).success(function(post){
                 // TODO: mudar url dps
-                $location.path('#/profile');
+                vm.text= null;
+                $location.path('/profile/' + AuthService.loggedUser.id);
             }).finally(function(){
                 vm.saving = false;
             })
