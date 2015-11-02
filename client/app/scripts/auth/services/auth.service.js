@@ -27,7 +27,7 @@
 		return vm;
 
 		function init() {
-			vm.loggedUser = $cookies.get(LOGGED_USER_KEY);
+			vm.loggedUser = $cookies.getObject(LOGGED_USER_KEY);
 		}
 
 		function login(email, password){
@@ -39,7 +39,7 @@
             };
 
 			Auth.login(credentials, config).then(function(user) {
-                $cookies.put(LOGGED_USER_KEY, user);
+                _saveUserCookie(user);
 				vm.loggedUser = user;
                 console.log(user);
                 defer.resolve(user);
@@ -56,7 +56,7 @@
 		}
 
 		function isUserLogged() {
-			return vm.loggedUser !== null;
+			return angular.isObject(vm.loggedUser);
 		}
 
 		function register(email, password, password_confirmation, username){
@@ -70,6 +70,7 @@
 			};
 
             Auth.register(credentials, config).then(function(user) {
+                _saveUserCookie(user);
                 vm.loggedUser = user;
                 console.log(user);
                 defer.resolve(user);
@@ -79,6 +80,14 @@
 
             return defer.promise;
 		}
+
+        function _saveUserCookie(user){
+            var now = new Date();
+            $cookies.putObject(LOGGED_USER_KEY, user, {
+                path: '/',
+                expires: new Date(now.getFullYear() + 1, now.getMonth(), now.getDate())
+            });
+        }
 	}
 
 })();
