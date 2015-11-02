@@ -10,7 +10,8 @@
     function PostApi(AppAjax){
         var vm = {
             list: list,
-            save: save
+            save: save,
+            upvote: upvote
         };
 
         return vm;
@@ -24,6 +25,11 @@
                 post: post
             }
             return AppAjax.post('/api/post.json', params);
+        }
+
+        function upvote(post_id){
+            var upvote_url = '/posts/' + post_id + '/upvote.json';
+            return AppAjax.post(upvote_url);
         }
     }
 })();
