@@ -28,7 +28,7 @@
 		}
 
 		function register () {
-            AuthService.register(vm.email, vm.password, vm.password_confirmation).then(function(registeredUser) {
+            AuthService.register(vm.email, vm.password, vm.password_confirmation, vm.username).then(function(registeredUser) {
                 $location.path('#/');
             }, function(error) {
               // Registration failed...

@@ -55,11 +55,12 @@
 			return vm.loggedUser !== null;
 		}
 
-		function register(email, password, password_confirmation){
+		function register(email, password, password_confirmation, username){
 			var defer = $q.defer()
 
 			var credentials = {
 			 	email: email,
+                username: username,
                 password: password,
                 password_confirmation: password_confirmation
 			};
