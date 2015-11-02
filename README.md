@@ -17,3 +17,26 @@
 * ``` $rake db:migrate ```
 
 * ``` $annotate --routes ```
+
+## CORS Devise
+
+### Include MimeResponds and gem 'responders' no Gemfile
+https://github.com/plataformatec/devise/issues/3160
+
+```
+class ApplicationController < ActionController::API
+  include ActionController::MimeResponds
+end
+```
+
+### Configurando Middleware
+https://github.com/cyu/rack-cors
+
+Gemfile
+gem 'rack-cors', :require => 'rack/cors'
+
+development.rb
+config.middleware.insert_before Warden::Manager, Rack::Cors
+
+### Adicionando respond_to no application controller
+https://github.com/cloudspace/angular_devise

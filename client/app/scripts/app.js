@@ -32,7 +32,7 @@ angular.module('trackerApp').config(function ($routeProvider) {
     .when('/register', {
       templateUrl: 'views/register.html',
       controller: 'RegisterCtrl',
-      controllerAs: 'register',
+      controllerAs: 'vc',
       activetab: 'register'
     })
     .when('/addPost', {
@@ -60,4 +60,4 @@ angular.module('trackerApp').config(function ($routeProvider) {
 
 angular.module('trackerApp').run(function(AuthService){
   AuthService.init();
-})
+});

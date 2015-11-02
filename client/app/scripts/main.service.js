@@ -1,27 +1,24 @@
 (function () {
 
-    'use strict'
+    'use strict';
 
     angular
         .module('trackerApp.auth')
         .factory('MainService', MainService);
 
-        function MainService () {
+        MainService.$inject = ['PostApi'];
+
+        function MainService(PostApi) {
             var vm = {
                 init: init,
             };
             return vm;
 
             function init() {
-                // vm.posts = [];
-                vm.posts = [
-                    {
-                        author: {
-                            username: 'jumentocelestino'
-                        },
-                        content: 'Conteudo de um post'
-                    }
-                ];
+                vm.posts = [];
+                PostApi.list().success(function(posts){
+                    vm.posts = posts;
+                });
             }
         }
 })();

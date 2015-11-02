@@ -8,7 +8,7 @@
 
 	AppCtrl.$inject = [
 		'saveClickDataService'
-	]
+	];
 
 	function AppCtrl(saveClickDataService){
 		var vc = this;

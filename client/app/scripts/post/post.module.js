@@ -1,3 +1,5 @@
 (function () {
-	angular.module('trackerApp.post', []);
+    'use strict';
+
+	angular.module('trackerApp.post', ['appajax']);
 })();

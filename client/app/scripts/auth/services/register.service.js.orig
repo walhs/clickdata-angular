@@ -7,13 +7,13 @@
 
 	RegisterService.$inject = [
 		'AuthService',
-        '$location'
+		'$location'
 	];
 
 	function RegisterService (AuthService, $location) {
 		var vm = {
 			init: init,
-            register: register
+			register: register
 		};
 
 		return vm;

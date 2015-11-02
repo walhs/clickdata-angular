@@ -19,8 +19,11 @@
           }
 
           function logIn(){
-              AuthService.logIn(vm.email, vm.password);
-              $location.path('#/');
+            AuthService.login(vm.email, vm.password).then(function(user) {
+                $location.path('#/');
+            }, function(error) {
+                // Authentication failed...
+            });
           }
       }
 
