@@ -1,3 +1,3 @@
 (function () {
-	angular.module('trackerApp.post', []);
+	angular.module('trackerApp.post', ['appajax']);
 })();
