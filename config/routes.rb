@@ -18,37 +18,39 @@
 #                          DELETE /users(.:format)                                  devise/registrations#destroy
 #               click_data GET    /api/click_data(.:format)                         click_data#index
 #                          POST   /api/click_data(.:format)                         click_data#create
-#              click_datum PATCH  /api/click_data/:id(.:format)                     click_data#update
+#              click_datum GET    /api/click_data/:id(.:format)                     click_data#show
+#                          PATCH  /api/click_data/:id(.:format)                     click_data#update
 #                          PUT    /api/click_data/:id(.:format)                     click_data#update
 #                          DELETE /api/click_data/:id(.:format)                     click_data#destroy
-#                   groups GET    /api/groups(.:format)                             groups#index
-#                          POST   /api/groups(.:format)                             groups#create
-#                    group PATCH  /api/groups/:id(.:format)                         groups#update
-#                          PUT    /api/groups/:id(.:format)                         groups#update
-#                          DELETE /api/groups/:id(.:format)                         groups#destroy
 #                    users GET    /api/users(.:format)                              users#index
 #                          POST   /api/users(.:format)                              users#create
-#                     user PATCH  /api/users/:id(.:format)                          users#update
+#                     user GET    /api/users/:id(.:format)                          users#show
+#                          PATCH  /api/users/:id(.:format)                          users#update
 #                          PUT    /api/users/:id(.:format)                          users#update
 #                          DELETE /api/users/:id(.:format)                          users#destroy
 #      upvote_post_comment PUT    /api/posts/:post_id/comments/:id/upvote(.:format) comments#upvote
 #            post_comments POST   /api/posts/:post_id/comments(.:format)            comments#create
 #             post_comment GET    /api/posts/:post_id/comments/:id(.:format)        comments#show
+#                          PATCH  /api/posts/:post_id/comments/:id(.:format)        comments#update
+#                          PUT    /api/posts/:post_id/comments/:id(.:format)        comments#update
+#                          DELETE /api/posts/:post_id/comments/:id(.:format)        comments#destroy
 #              upvote_post PUT    /api/posts/:id/upvote(.:format)                   posts#upvote
 #                    posts GET    /api/posts(.:format)                              posts#index
 #                          POST   /api/posts(.:format)                              posts#create
 #                     post GET    /api/posts/:id(.:format)                          posts#show
+#                          PATCH  /api/posts/:id(.:format)                          posts#update
+#                          PUT    /api/posts/:id(.:format)                          posts#update
+#                          DELETE /api/posts/:id(.:format)                          posts#destroy
 #
 
 Rails.application.routes.draw do
 
   devise_for :users
   scope '/api' do
-    resources :click_data, except: [:new, :edit, :show]
-    resources :groups, except: [:new, :edit, :show]
-    resources :users, except: [:new, :edit, :show]
-    resources :posts, only: [:create, :index, :show] do
-      resources :comments, only: [:show, :create] do
+    resources :click_data, except: [:new, :edit,]
+    resources :users, except: [:new, :edit]
+    resources :posts, except: [:new, :edit] do
+    resources :comments, except: [:new, :edit, :index] do
         member do
           put '/upvote' => 'comments#upvote'
         end
