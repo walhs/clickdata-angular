@@ -1,6 +1,6 @@
 class ClickDataController < ApplicationController
   before_action :set_click_data, only: [:show, :update, :destroy]
-
+  #before_filter :authenticate_user!
   # GET /click_data
   # GET /click_data.json
   def index

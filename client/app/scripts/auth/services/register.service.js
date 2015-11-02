@@ -6,13 +6,13 @@
 		.factory('RegisterService', RegisterService);
 
 	RegisterService.$inject = [
-		'AuthService',
 		'Auth'
 	];
 
-	function RegisterService () {
+	function RegisterService (Auth) {
 		var vm = {
-			init: init
+			init: init,
+			register: register
 		};
 
 		return vm;

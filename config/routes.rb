@@ -35,7 +35,6 @@ Rails.application.routes.draw do
   devise_for :users
   scope '/api' do
     resources :click_data, except: [:new, :edit]
-    resources :groups, except: [:new, :edit]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

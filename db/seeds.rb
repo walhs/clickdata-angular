@@ -11,3 +11,5 @@ ClickData.create([
 	{ user_token: 'user_1', x: 0, y:20.0, scroll_position: 234, url:"localhost:9000" },
 	{ user_token: 'user_2', x: 10, y:40.0, scroll_position: 532, url:"localhost:3000" },
 ])
+
+#User.create!(:email => "admin@atacama.com", :password => "atacama2015") unless User.exists?(:email => "admin@atacama.com")
