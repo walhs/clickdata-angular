@@ -28,6 +28,12 @@
 #                          PATCH  /api/groups/:id(.:format)      groups#update
 #                          PUT    /api/groups/:id(.:format)      groups#update
 #                          DELETE /api/groups/:id(.:format)      groups#destroy
+#                    users GET    /api/users(.:format)           users#index
+#                          POST   /api/users(.:format)           users#create
+#                     user GET    /api/users/:id(.:format)       users#show
+#                          PATCH  /api/users/:id(.:format)       users#update
+#                          PUT    /api/users/:id(.:format)       users#update
+#                          DELETE /api/users/:id(.:format)       users#destroy
 #
 
 Rails.application.routes.draw do
@@ -36,6 +42,7 @@ Rails.application.routes.draw do
   scope '/api' do
     resources :click_data, except: [:new, :edit]
     resources :groups, except: [:new, :edit]
+    resources :users, except: [:new, :edit]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
