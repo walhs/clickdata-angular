@@ -19,14 +19,14 @@
         return vm;
 
         function list(){
-            return AppAjax.get('/api/post.json');
+            return AppAjax.get('/api/posts.json');
         }
 
         function save(post) {
             var params = {
                 post: post
             }
-            return AppAjax.post('/api/post.json', params);
+            return AppAjax.post('/api/posts.json', params);
         }
 
         function upvote(post){

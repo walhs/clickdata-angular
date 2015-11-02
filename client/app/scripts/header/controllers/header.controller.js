@@ -17,7 +17,7 @@
 
 		// Lugar errado - @Refactoring
 		vc.logout = function(){
-			vc.auth.logOut();
+			vc.auth.logout();
 			$location.path('#/');
 		}
 	}

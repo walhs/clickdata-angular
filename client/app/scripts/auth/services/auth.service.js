@@ -6,7 +6,7 @@
 		.module('trackerApp.auth')
 		.factory('AuthService', AuthService);
 
-	function AuthService (Auth, $q) {
+	function AuthService (Auth, $q, $cookies) {
 		var vm = {
 			init: init,
 			login: login,
@@ -22,10 +22,12 @@
 	        }
 	    };
 
+        var LOGGED_USER_KEY = 'CLICKDATA_KEY';
+
 		return vm;
 
 		function init() {
-			vm.loggedUser = null;
+			vm.loggedUser = $cookies.get(LOGGED_USER_KEY);
 		}
 
 		function login(email, password){
@@ -37,6 +39,7 @@
             };
 
 			Auth.login(credentials, config).then(function(user) {
+                $cookies.put(LOGGED_USER_KEY, user);
 				vm.loggedUser = user;
                 console.log(user);
                 defer.resolve(user);
@@ -49,6 +52,7 @@
 
 		function logout() {
 			vm.loggedUser = null;
+            $cookies.remove(LOGGED_USER_KEY);
 		}
 
 		function isUserLogged() {
