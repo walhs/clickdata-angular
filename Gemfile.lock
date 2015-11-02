@@ -51,6 +51,7 @@ GEM
     orm_adapter (0.5.0)
     pg (0.18.3)
     rack (1.5.5)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.9)
@@ -112,7 +113,12 @@ DEPENDENCIES
   annotate
   devise
   pg
+  rack-cors
   rails (= 4.1.9)
   rails-api
+  responders
   rspec-rails
   spring
+
+BUNDLED WITH
+   1.10.6

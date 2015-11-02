@@ -6,13 +6,13 @@
 		.factory('RegisterService', RegisterService);
 
 	RegisterService.$inject = [
-		'AuthService',
 		'Auth'
 	];
 
-	function RegisterService () {
+	function RegisterService (Auth) {
 		var vm = {
-			init: init
+			init: init,
+            register: register
 		};
 
 		return vm;
@@ -29,19 +29,24 @@
 		function register () {
 			var credentials = {
 			 	email: vm.email,
-        password: vm.password,
-        password_confirmation: vm.password_confirmation
+                password: vm.password,
+                password_confirmation: vm.password_confirmation
 			};
+
 			var config = {
-      	headers: {
-          'X-HTTP-Method-Override': 'POST'
-        }
-      };
-			Auth.register(credentials, config).then(function(registeredUser) {
-          console.log(registeredUser); // => {id: 1, ect: '...'}
-      }, function(error) {
-          // Registration failed...
-      });
+                headers: {
+                    'X-HTTP-Method-Override': 'POST',
+                    'Content-Type': 'application/json',
+                    // 'X-Requested-With': 'XMLHttpRequest'
+                },
+                // withCredentials: true
+            };
+
+            Auth.register(credentials, config).then(function(registeredUser) {
+                console.log(registeredUser); // => {id: 1, ect: '...'}
+            }, function(error) {
+              // Registration failed...
+            });
 		}
 	}
 })();
