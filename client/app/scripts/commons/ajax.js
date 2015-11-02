@@ -32,7 +32,7 @@
             }
 
             if(AuthService.loggedUser){
-                params.user_id = AuthService.loggedUser.id
+                params.user_id = AuthService.loggedUser.id;
             }
 
             var promise = $http({
@@ -49,7 +49,7 @@
             }
 
             if(AuthService.loggedUser){
-                params.user_id = AuthService.loggedUser.id
+                params.user_id = AuthService.loggedUser.id;
             }
 
             var promise = $http({

@@ -1,4 +1,6 @@
 (function(){
+    "use strict";
+
     angular.module('trackerApp.profile').config(function ($routeProvider) {
 
       $routeProvider
