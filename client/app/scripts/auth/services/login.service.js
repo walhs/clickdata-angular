@@ -6,7 +6,7 @@
       .module('trackerApp.auth')
       .factory('LoginService', LoginService);
 
-      function LoginService (AuthService, $location) {
+      function LoginService (Auth, $location) {
           var vm = {
               init: init,
               logIn: logIn,
@@ -19,8 +19,26 @@
           }
 
           function logIn(){
-              AuthService.logIn(vm.email, vm.password);
-              $location.path('#/');
+            var credentials = {
+                email: vm.email,
+                password: vm.password
+            };
+            var config = {
+                headers: {
+                    'X-HTTP-Method-Override': 'POST',
+                    'Content-Type': 'application/json',
+                }
+            };
+
+            Auth.login(credentials, config).then(function(user) {
+                console.log(user); // => {id: 1, ect: '...'}
+                $location.path('#/');
+            }, function(error) {
+                // Authentication failed...
+            });
+
+              // Auth.logIn(vm.email, vm.password);
+
           }
       }
 
