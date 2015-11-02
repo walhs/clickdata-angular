@@ -1,8 +1,8 @@
 <div class="profile">
   <div class="jumbotron profile__header p-text-align-left">
-    <h1 class="profile__username">+{{ vc.auth.loggedUser.username }}</h1>
-    <p class="profile__tagline">{{ vc.auth.loggedUser.tagline }}</p>
+    <h1 class="profile__username">+{{ vc.vm.user.username }}</h1>
+    <!-- <p class="profile__tagline">{{ vc.auth.loggedUser.tagline }}</p> -->
   </div>
 
-  <posts posts="vc.posts"></posts>
+  <posts posts="vc.vm.user.posts"></posts>
 </div>
