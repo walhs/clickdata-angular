@@ -1,36 +1,43 @@
 # == Route Map
 #
-#                   Prefix Verb   URI Pattern                    Controller#Action
-#         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
-#             user_session POST   /users/sign_in(.:format)       devise/sessions#create
-#     destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy
-#            user_password POST   /users/password(.:format)      devise/passwords#create
-#        new_user_password GET    /users/password/new(.:format)  devise/passwords#new
-#       edit_user_password GET    /users/password/edit(.:format) devise/passwords#edit
-#                          PATCH  /users/password(.:format)      devise/passwords#update
-#                          PUT    /users/password(.:format)      devise/passwords#update
-# cancel_user_registration GET    /users/cancel(.:format)        devise/registrations#cancel
-#        user_registration POST   /users(.:format)               devise/registrations#create
-#    new_user_registration GET    /users/sign_up(.:format)       devise/registrations#new
-#   edit_user_registration GET    /users/edit(.:format)          devise/registrations#edit
-#                          PATCH  /users(.:format)               devise/registrations#update
-#                          PUT    /users(.:format)               devise/registrations#update
-#                          DELETE /users(.:format)               devise/registrations#destroy
-#               click_data GET    /api/click_data(.:format)      click_data#index
-#                          POST   /api/click_data(.:format)      click_data#create
-#              click_datum PATCH  /api/click_data/:id(.:format)  click_data#update
-#                          PUT    /api/click_data/:id(.:format)  click_data#update
-#                          DELETE /api/click_data/:id(.:format)  click_data#destroy
-#                   groups GET    /api/groups(.:format)          groups#index
-#                          POST   /api/groups(.:format)          groups#create
-#                    group PATCH  /api/groups/:id(.:format)      groups#update
-#                          PUT    /api/groups/:id(.:format)      groups#update
-#                          DELETE /api/groups/:id(.:format)      groups#destroy
-#                    users GET    /api/users(.:format)           users#index
-#                          POST   /api/users(.:format)           users#create
-#                     user PATCH  /api/users/:id(.:format)       users#update
-#                          PUT    /api/users/:id(.:format)       users#update
-#                          DELETE /api/users/:id(.:format)       users#destroy
+#                   Prefix Verb   URI Pattern                                       Controller#Action
+#         new_user_session GET    /users/sign_in(.:format)                          devise/sessions#new
+#             user_session POST   /users/sign_in(.:format)                          devise/sessions#create
+#     destroy_user_session DELETE /users/sign_out(.:format)                         devise/sessions#destroy
+#            user_password POST   /users/password(.:format)                         devise/passwords#create
+#        new_user_password GET    /users/password/new(.:format)                     devise/passwords#new
+#       edit_user_password GET    /users/password/edit(.:format)                    devise/passwords#edit
+#                          PATCH  /users/password(.:format)                         devise/passwords#update
+#                          PUT    /users/password(.:format)                         devise/passwords#update
+# cancel_user_registration GET    /users/cancel(.:format)                           devise/registrations#cancel
+#        user_registration POST   /users(.:format)                                  devise/registrations#create
+#    new_user_registration GET    /users/sign_up(.:format)                          devise/registrations#new
+#   edit_user_registration GET    /users/edit(.:format)                             devise/registrations#edit
+#                          PATCH  /users(.:format)                                  devise/registrations#update
+#                          PUT    /users(.:format)                                  devise/registrations#update
+#                          DELETE /users(.:format)                                  devise/registrations#destroy
+#               click_data GET    /api/click_data(.:format)                         click_data#index
+#                          POST   /api/click_data(.:format)                         click_data#create
+#              click_datum PATCH  /api/click_data/:id(.:format)                     click_data#update
+#                          PUT    /api/click_data/:id(.:format)                     click_data#update
+#                          DELETE /api/click_data/:id(.:format)                     click_data#destroy
+#                   groups GET    /api/groups(.:format)                             groups#index
+#                          POST   /api/groups(.:format)                             groups#create
+#                    group PATCH  /api/groups/:id(.:format)                         groups#update
+#                          PUT    /api/groups/:id(.:format)                         groups#update
+#                          DELETE /api/groups/:id(.:format)                         groups#destroy
+#                    users GET    /api/users(.:format)                              users#index
+#                          POST   /api/users(.:format)                              users#create
+#                     user PATCH  /api/users/:id(.:format)                          users#update
+#                          PUT    /api/users/:id(.:format)                          users#update
+#                          DELETE /api/users/:id(.:format)                          users#destroy
+#      upvote_post_comment PUT    /api/posts/:post_id/comments/:id/upvote(.:format) comments#upvote
+#            post_comments POST   /api/posts/:post_id/comments(.:format)            comments#create
+#             post_comment GET    /api/posts/:post_id/comments/:id(.:format)        comments#show
+#              upvote_post PUT    /api/posts/:id/upvote(.:format)                   posts#upvote
+#                    posts GET    /api/posts(.:format)                              posts#index
+#                          POST   /api/posts(.:format)                              posts#create
+#                     post GET    /api/posts/:id(.:format)                          posts#show
 #
 
 Rails.application.routes.draw do
@@ -40,6 +47,17 @@ Rails.application.routes.draw do
     resources :click_data, except: [:new, :edit, :show]
     resources :groups, except: [:new, :edit, :show]
     resources :users, except: [:new, :edit, :show]
+    resources :posts, only: [:create, :index, :show] do
+      resources :comments, only: [:show, :create] do
+        member do
+          put '/upvote' => 'comments#upvote'
+        end
+      end
+
+      member do
+        put '/upvote' => 'posts#upvote'
+      end
+    end
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
