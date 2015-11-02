@@ -1,3 +1,3 @@
 (function () {
-	angular.module('trackerApp.auth', []);
+	angular.module('trackerApp.auth', ['Devise']);
 })();

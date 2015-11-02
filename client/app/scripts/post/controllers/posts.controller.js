@@ -3,7 +3,7 @@
 
   angular.module('trackerApp.post').controller('PostsCtrl', PostsCtrl);
 
-  PostsCtrl.$inject = ['$scope'];
+  PostsCtrl.$inject = ['$scope', 'AuthService'];
 
   // Lugar errado - @Refactoring
   function PostsCtrl($scope) {

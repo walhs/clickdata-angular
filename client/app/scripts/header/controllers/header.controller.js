@@ -9,7 +9,7 @@
 	HeaderCtrl.$inject = [
 		'AuthService',
 		'$location'
-	]
+	];
 
 	function HeaderCtrl (AuthService, $location) {
 		var vc = this;

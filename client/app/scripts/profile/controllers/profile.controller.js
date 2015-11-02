@@ -1,25 +1,25 @@
 (function () {
 
-    'use strict';
+  'use strict';
 
-    angular.module('trackerApp.profile')
-      .controller('ProfileCtrl', ProfileCtrl);
+  angular.module('trackerApp.profile')
+    .controller('ProfileCtrl', ProfileCtrl);
 
-    ProfileCtrl.$inject = ['AuthService'];
+  ProfileCtrl.$inject = ['AuthService'];
 
-    function ProfileCtrl(AuthService) {
-        var vc = this;
+  function ProfileCtrl(AuthService) {
+      var vc = this;
 
-        vc.auth = AuthService;
+      vc.auth = AuthService;
 
-        vc.posts = [
-            {
-                author: {
-                    username: 'jumentocelestino'
-                },
-                content: 'Conteudo de um post'
-            }
-        ];
-    }
+      vc.posts = [
+          {
+              author: {
+                  username: 'jumentocelestino'
+              },
+              content: 'Conteudo de um post'
+          }
+      ];
+  }
 
 })();

@@ -13,8 +13,14 @@
 	angular.module('trackerApp.auth')
 	  .controller('RegisterCtrl', RegisterCtrl);
 
-	function RegisterCtrl(){
+	RegisterCtrl.$inject = [
+		'RegisterService'
+	];
+
+	function RegisterCtrl(RegisterService){
 		var vc = this;
+		vc.vm = RegisterService;
+		vc.vm.init();
 	}
-	
+
 })();
