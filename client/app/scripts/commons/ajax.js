@@ -5,6 +5,8 @@
 
     angular.module('appajax').config(
         function($httpProvider){
+            // $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+            // $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
             $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
             // Esse content-type estava dando problema com o devise - Ele espera um json
             // tinha duas opcoes:
@@ -28,6 +30,7 @@
             if(!params){
                 params = {};
             }
+
             var promise = $http({
                 method: 'GET',
                 url: url,
@@ -40,7 +43,7 @@
             if(!params){
                 params = {};
             }
-            //$http.defaults.headers.post['X-CSRFToken'] = $cookies.get('csrftoken');
+
             var promise = $http({
                 method: 'POST',
                 url: url,

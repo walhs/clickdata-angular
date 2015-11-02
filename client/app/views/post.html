@@ -1,11 +1,11 @@
 <div class="jumbotron col-xs-6 col-sm-offset-2 col-md-offset-3">
 	<div class="row">
-		<h3>Hi, User</h3>
+		<h3>Hi, {{vc.auth.loggedUser.username}}</h3>
 	</div>
   <h4>Leave a Comment:</h4>
-  <form role="form">
+  <form role="form" ng-submit="vc.vm.savePost()">
       <div class="form-group">
-          <textarea class="form-control" rows="2"></textarea>
+          <textarea class="form-control" rows="2" ng-model="vc.vm.text"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
   </form>

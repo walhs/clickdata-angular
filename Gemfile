@@ -20,9 +20,10 @@ gem 'devise'
 #Annotate for routes
 gem 'annotate'
 
-
+# resolving CORS - Request from diferent domain
 gem 'rack-cors', :require => 'rack/cors'
 
+#
 gem 'responders'
 
 # To use ActiveModel has_secure_password
