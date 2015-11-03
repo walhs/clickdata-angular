@@ -5,15 +5,19 @@
 	.module('trackerApp.header')
 	.factory('HeaderService', HeaderService);
 
-	function HeaderService () {
+	HeaderService.$inject = ['AuthService', 'TokenService', '$location'];
+
+	function HeaderService(AuthService, TokenService, $location) {
 		var vm = {
-			init: init,
+			logout: logout
 		};
 
 		return vm;
 
-		function init () {
-
+		function logout(){
+			AuthService.logout();
+			TokenService.renewToken();
+			$location.path('#/');
 		}
 
 	}

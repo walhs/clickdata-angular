@@ -7,10 +7,11 @@
 
 	RegisterService.$inject = [
 		'AuthService',
-        '$location'
+        '$location',
+        'TokenService'
 	];
 
-	function RegisterService (AuthService, $location) {
+	function RegisterService (AuthService, $location, TokenService) {
 		var vm = {
 			init: init,
             register: register
@@ -29,6 +30,7 @@
 
 		function register () {
             AuthService.register(vm.email, vm.password, vm.password_confirmation, vm.username).then(function(registeredUser) {
+                TokenService.updateToken();
                 $location.path('#/');
             }, function(error) {
                 if(error.data.errors){

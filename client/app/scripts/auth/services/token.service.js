@@ -32,7 +32,7 @@
         function updateToken(){
             vm.currentToken.user_id = AuthService.loggedUser.id;
             TokenApi.save(vm.currentToken).success(function(token){
-                $cookies.putObject(TOKEN_KEY, token);
+               _saveTokenCookie(token);
             }).error(function(error){
                 vm.currentToken = $cookies.getObject(TOKEN_KEY);
             });
@@ -41,7 +41,15 @@
         function renewToken() {
             TokenApi.generateToken().success(function(token){
                 vm.currentToken = token;
-                $cookies.putObject(TOKEN_KEY, token);
+                _saveTokenCookie(token);
+            });
+        }
+
+        function _saveTokenCookie(token){
+            var now = new Date();
+            $cookies.putObject(TOKEN_KEY, token, {
+                path: '/',
+                expires: new Date(now.getFullYear() + 1, now.getMonth(), now.getDate())
             });
         }
     }
