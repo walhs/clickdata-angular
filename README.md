@@ -40,3 +40,9 @@ config.middleware.insert_before Warden::Manager, Rack::Cors
 
 ### Adicionando respond_to no application controller
 https://github.com/cloudspace/angular_devise
+
+### Start postgres mac ox
+* pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+
+### Stop postgres mac ox
+* pg_ctl -D /usr/local/var/postgres stop -s -m fast
