@@ -22,7 +22,7 @@
             AuthService.login(vm.email, vm.password).then(function(user) {
                 $location.path('#/');
             }, function(error) {
-                // Authentication failed...
+                alert(error.data.error);
             });
           }
       }

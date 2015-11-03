@@ -31,7 +31,12 @@
             AuthService.register(vm.email, vm.password, vm.password_confirmation, vm.username).then(function(registeredUser) {
                 $location.path('#/');
             }, function(error) {
-              // Registration failed...
+                if(error.data.errors.password_confirmation){
+                    alert(error.data.errors.password_confirmation);
+                }
+                else{
+                    alert("Erro, favor conferir se o formulario está preenchido corretamente.")
+                }
             });
 		}
 	}
