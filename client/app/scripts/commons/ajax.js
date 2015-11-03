@@ -22,6 +22,7 @@
         var AppAjax = {
             get: get,
             post: post,
+            put: put,
         };
 
         return AppAjax;
@@ -54,6 +55,23 @@
 
             var promise = $http({
                 method: 'POST',
+                url: url,
+                data: $.param(params)
+            });
+            return promise;
+        }
+
+        function put(url, params){
+            if(!params){
+                params = {};
+            }
+
+            if(AuthService.loggedUser){
+                params.user_id = AuthService.loggedUser.id;
+            }
+
+            var promise = $http({
+                method: 'PUT',
                 url: url,
                 data: $.param(params)
             });
