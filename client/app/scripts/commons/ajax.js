@@ -73,7 +73,7 @@
             var promise = $http({
                 method: 'PUT',
                 url: url,
-                data: $.param(params)
+                data: params
             });
             return promise;
         }

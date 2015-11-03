@@ -18,7 +18,8 @@
         return vm;
 
         function save(token){
-            return AppAjax.put('/api/tokens.json', token);
+            var token_update_url = '/api/tokens/' + token.id + '.json'
+            return AppAjax.put(token_update_url, token);
         }
 
         function generateToken(){
