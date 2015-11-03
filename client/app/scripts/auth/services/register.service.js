@@ -38,9 +38,17 @@
                     else if(error.data.errors.password_confirmation){
                         alert(error.data.errors.password_confirmation);
                     }
+                    else if(error.data.errors.password){
+                        alert(error.data.errors.password);
+                    }
                 }
                 else{
-                    alert("Erro, favor conferir se o formulario está preenchido corretamente.")
+                    if(error.data.indexOf('duplicate key value')){
+                        alert("Username already been taken");
+                    }
+                    else{
+                        alert("Erro, favor conferir se o formulario está preenchido corretamente.")
+                    }
                 }
             });
 		}
