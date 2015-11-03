@@ -6,9 +6,9 @@
         .module('trackerApp.auth')
         .factory('MainService', MainService);
 
-        MainService.$inject = ['PostApi'];
+        MainService.$inject = ['PostApi', 'PostsService'];
 
-        function MainService(PostApi) {
+        function MainService(PostApi, PostsService) {
             var vm = {
                 init: init,
             };
@@ -17,7 +17,7 @@
             function init() {
                 vm.posts = [];
                 PostApi.list().success(function(posts){
-                    vm.posts = posts;
+                    PostsService.setPosts(posts);
                 });
             }
         }

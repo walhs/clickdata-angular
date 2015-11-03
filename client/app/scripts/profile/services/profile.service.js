@@ -22,8 +22,7 @@
             UserApi.get(user_id).success(function(user){
                 vm.user = user;
                 vm.user.posts.map(function(p){
-                    p.username = user.username;
-                    p.user_id = user.id;
+                    p.user = user;
                 });
                 PostsService.setPosts(vm.user.posts);
             })
