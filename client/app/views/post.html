@@ -5,8 +5,8 @@
   <h4>Leave a Comment:</h4>
   <form role="form" ng-submit="vc.vm.savePost()">
       <div class="form-group">
-          <textarea class="form-control" rows="2" ng-model="vc.vm.text"></textarea>
+          <textarea gatilho="textarea" class="form-control" rows="2" ng-model="vc.vm.text"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary" ng-disabled="vc.vm.saving">Submit</button>
+      <button gatilho="btn_submit" type="submit" class="btn btn-primary" ng-disabled="vc.vm.saving">Submit</button>
   </form>
 </div>
