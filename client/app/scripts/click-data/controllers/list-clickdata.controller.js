@@ -1,14 +1,16 @@
-'use strict';
+(function(){
+    'use strict';
 
-angular.module('trackerApp.clickdata')
-  .controller('listClickdataController', listClickdataController);
+    angular.module('trackerApp.clickdata')
+      .controller('listClickdataController', listClickdataController);
 
-listClickdataController.$inject = [
-	'listClickDataService'
-]
+    listClickdataController.$inject = [
+        'listClickDataService'
+    ]
 
-function listClickdataController (listClickDataService) {
-	var vc = this;
-	vc.vm = listClickDataService;
-	vc.vm.init();
-}
+    function listClickdataController (listClickDataService) {
+        var vc = this;
+        vc.vm = listClickDataService;
+        vc.vm.init();
+    }
+})();

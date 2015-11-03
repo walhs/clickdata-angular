@@ -13,7 +13,7 @@ function saveClickDataService(clickDataApi) {
 
 	return vm;
 
-	function save() {
+	function save(gatilho) {
 		var clickdata = {
 			user_token: "blablabla123",
 			x: event.clientX,
@@ -21,6 +21,11 @@ function saveClickDataService(clickDataApi) {
 			scroll_position: document.body.scrollTop,
 			url: window.location.href
 		};
+
+		if(gatilho){
+			clickdata.gatilho = gatilho;
+		}
+
 		clickDataApi.save(clickdata).then(function(result) {
 			console.log('Save success: ' + result);
 		}, function(err){

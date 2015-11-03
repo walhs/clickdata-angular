@@ -1,12 +1,11 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, only: [:create, :upvote]
 
   def index
     respond_with Post.all
   end
 
   def create
-    respond_with Post.create(post_params.merge(user_id: current_user.id))
+    respond_with Post.create(post_params.merge(user_id: params[:user_id]))
   end
 
   def show
@@ -22,6 +21,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:link, :title)
+    params.require(:post).permit(:text)
   end
 end

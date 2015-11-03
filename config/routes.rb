@@ -50,7 +50,7 @@ Rails.application.routes.draw do
     resources :click_data, except: [:new, :edit,]
     resources :users, except: [:new, :edit]
     resources :posts, except: [:new, :edit] do
-    resources :comments, except: [:new, :edit, :index] do
+    resources :comments, except: [:new, :edit] do
         member do
           put '/upvote' => 'comments#upvote'
         end

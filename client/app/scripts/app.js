@@ -16,6 +16,7 @@ angular.module('trackerApp', [
 ]);
 
 angular.module('trackerApp').config(function ($routeProvider) {
+
   $routeProvider
     .when('/', {
       templateUrl: 'views/main.html',
@@ -34,18 +35,6 @@ angular.module('trackerApp').config(function ($routeProvider) {
       controller: 'RegisterCtrl',
       controllerAs: 'vc',
       activetab: 'register'
-    })
-    .when('/addPost', {
-      templateUrl: 'views/post.html',
-      controller: 'PostCtrl',
-      controllerAs: 'post',
-      activetab: 'addPost'
-    })
-    .when('/profile', {
-      templateUrl: 'views/profile.html',
-      controller: 'ProfileCtrl',
-      controllerAs: 'vc',
-      activetab: 'profile'
     })
     .when('/settings', {
       templateUrl: 'views/settings.html',

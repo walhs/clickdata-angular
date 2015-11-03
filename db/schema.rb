@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151102171235) do
+ActiveRecord::Schema.define(version: 20151103003053) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20151102171235) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "gatilho"
   end
 
   create_table "comments", force: true do |t|
@@ -47,12 +48,11 @@ ActiveRecord::Schema.define(version: 20151102171235) do
   add_index "groups", ["name"], name: "index_groups_on_name", unique: true, using: :btree
 
   create_table "posts", force: true do |t|
-    t.string   "title"
-    t.string   "link"
     t.integer  "upvotes"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "text"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree

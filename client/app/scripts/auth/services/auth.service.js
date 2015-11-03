@@ -28,6 +28,9 @@
 
 		function init() {
 			vm.loggedUser = $cookies.getObject(LOGGED_USER_KEY);
+            if(vm.loggedUser){
+                Auth._currentUser = vm.loggedUser;
+            }
 		}
 
 		function login(email, password){
@@ -41,7 +44,6 @@
 			Auth.login(credentials, config).then(function(user) {
                 _saveUserCookie(user);
 				vm.loggedUser = user;
-                console.log(user);
                 defer.resolve(user);
             }, function(error) {
             	defer.reject(error);

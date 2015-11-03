@@ -10,9 +10,7 @@
       controller: 'PostsCtrl',
       controllerAs: 'vc',
       restrict: 'E',
-      scope: {
-        posts: '='
-      },
+      scope: {},
       templateUrl: 'scripts/post/directives/posts.directive.html',
     };
 

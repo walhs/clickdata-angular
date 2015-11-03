@@ -5,21 +5,13 @@
   angular.module('trackerApp.profile')
     .controller('ProfileCtrl', ProfileCtrl);
 
-  ProfileCtrl.$inject = ['AuthService'];
+  ProfileCtrl.$inject = ['$routeParams', 'ProfileService'];
 
-  function ProfileCtrl(AuthService) {
+  function ProfileCtrl($routeParams, ProfileService) {
       var vc = this;
 
-      vc.auth = AuthService;
-
-      vc.posts = [
-          {
-              author: {
-                  username: 'jumentocelestino'
-              },
-              content: 'Conteudo de um post'
-          }
-      ];
+      vc.vm = ProfileService;
+      vc.vm.init(parseInt($routeParams.user_id));
   }
 
 })();

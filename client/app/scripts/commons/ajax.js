@@ -1,10 +1,12 @@
 (function(){
     "use strict";
 
-    angular.module('appajax', []);
+    angular.module('appajax', ['trackerApp.auth']);
 
     angular.module('appajax').config(
         function($httpProvider){
+            // $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+            // $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
             $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
             // Esse content-type estava dando problema com o devise - Ele espera um json
             // tinha duas opcoes:
@@ -15,7 +17,7 @@
         }
     );
 
-    angular.module('appajax').factory('AppAjax', function($http){
+    angular.module('appajax').factory('AppAjax', function($http, AuthService){
 
         var AppAjax = {
             get: get,
@@ -28,6 +30,11 @@
             if(!params){
                 params = {};
             }
+
+            if(AuthService.loggedUser){
+                params.user_id = AuthService.loggedUser.id;
+            }
+
             var promise = $http({
                 method: 'GET',
                 url: url,
@@ -40,7 +47,11 @@
             if(!params){
                 params = {};
             }
-            //$http.defaults.headers.post['X-CSRFToken'] = $cookies.get('csrftoken');
+
+            if(AuthService.loggedUser){
+                params.user_id = AuthService.loggedUser.id;
+            }
+
             var promise = $http({
                 method: 'POST',
                 url: url,
