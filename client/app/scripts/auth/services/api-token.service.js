@@ -18,11 +18,11 @@
         return vm;
 
         function save(token){
-            return AppAjax.put('/api/token.json', token);
+            return AppAjax.put('/api/tokens.json', token);
         }
 
         function generateToken(){
-            return AppAjax.post('/api/token.json');
+            return AppAjax.post('/api/tokens.json');
         }
     }
 })();

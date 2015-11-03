@@ -11,7 +11,7 @@
         'TokenApi'
     ];
 
-    function TokenService (AuthService, $cookies, TokenApi) {
+    function TokenService(AuthService, $cookies, TokenApi) {
         var vm = {
             init: init,
             updateToken: updateToken,
@@ -22,7 +22,7 @@
 
         return vm;
 
-        function init() {
+        function init(){
             vm.currentToken = $cookies.getObject(TOKEN_KEY);
             if(!vm.currentToken){
                 vm.renewToken();
@@ -31,19 +31,18 @@
 
         function updateToken(){
             vm.currentToken.user_id = AuthService.loggedUser.id;
-            TokenApi.save(vm.currentToken).then(function(token){
+            TokenApi.save(vm.currentToken).success(function(token){
                 $cookies.putObject(TOKEN_KEY, token);
-            },
-            function(error){
+            }).error(function(error){
                 vm.currentToken = $cookies.getObject(TOKEN_KEY);
-            })
+            });
         }
 
         function renewToken() {
-            TokenApi.generateToken().then(function(token){
+            TokenApi.generateToken().success(function(token){
                 vm.currentToken = token;
                 $cookies.putObject(TOKEN_KEY, token);
-            })
+            });
         }
     }
 })();
