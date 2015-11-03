@@ -5,7 +5,8 @@ class TokensController < ApplicationController
     end
 
     def create
-        respond_with Token.create(token_params.merge(user_id: params[:user_id]))
+        new_token = generate_token
+        respond_with Token.create({token: new_token})
     end
 
     def show
