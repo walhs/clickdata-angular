@@ -54,6 +54,6 @@ class ClickDataController < ApplicationController
     end
 
     def click_data_params
-      params.require(:click_data).permit(:user_token, :x, :y, :scroll_position, :url)
+      params.require(:click_data).permit(:user_token, :x, :y, :scroll_position, :url, :gatilho)
     end
 end
