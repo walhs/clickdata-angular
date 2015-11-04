@@ -28,8 +28,15 @@
 #                          PATCH  /api/users/:id(.:format)                          users#update
 #                          PUT    /api/users/:id(.:format)                          users#update
 #                          DELETE /api/users/:id(.:format)                          users#destroy
+#                   tokens GET    /api/tokens(.:format)                             tokens#index
+#                          POST   /api/tokens(.:format)                             tokens#create
+#                    token GET    /api/tokens/:id(.:format)                         tokens#show
+#                          PATCH  /api/tokens/:id(.:format)                         tokens#update
+#                          PUT    /api/tokens/:id(.:format)                         tokens#update
+#                          DELETE /api/tokens/:id(.:format)                         tokens#destroy
 #      upvote_post_comment PUT    /api/posts/:post_id/comments/:id/upvote(.:format) comments#upvote
-#            post_comments POST   /api/posts/:post_id/comments(.:format)            comments#create
+#            post_comments GET    /api/posts/:post_id/comments(.:format)            comments#index
+#                          POST   /api/posts/:post_id/comments(.:format)            comments#create
 #             post_comment GET    /api/posts/:post_id/comments/:id(.:format)        comments#show
 #                          PATCH  /api/posts/:post_id/comments/:id(.:format)        comments#update
 #                          PUT    /api/posts/:post_id/comments/:id(.:format)        comments#update
@@ -47,8 +54,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   scope '/api' do
-    resources :click_data, except: [:new, :edit,]
+    resources :click_data, except: [:new, :edit]
     resources :users, except: [:new, :edit]
+    resources :tokens, except: [:new, :edit]
+
     resources :posts, except: [:new, :edit] do
     resources :comments, except: [:new, :edit] do
         member do

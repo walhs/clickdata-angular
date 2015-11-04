@@ -1,0 +1,15 @@
+.form-input {
+    @include transition(all ease-in .5s);
+
+    &.input-error {
+        color: $color-error;
+        border-bottom-color: $color-error;
+        @include box-shadow(0 10px 10px -10px rgba($color-error, .5));
+    }
+}
+
+.form-msg {
+    &.form-msg-error {
+        color: $color-error;
+    }
+}

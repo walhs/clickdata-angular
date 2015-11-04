@@ -11,13 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151103003053) do
+ActiveRecord::Schema.define(version: 20151104000145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "click_data", force: true do |t|
-    t.string   "user_token"
     t.float    "x"
     t.float    "y"
     t.float    "scroll_position"
@@ -25,7 +24,10 @@ ActiveRecord::Schema.define(version: 20151103003053) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "gatilho"
+    t.integer  "token_id"
   end
+
+  add_index "click_data", ["token_id"], name: "index_click_data_on_token_id", using: :btree
 
   create_table "comments", force: true do |t|
     t.string   "body"
@@ -48,6 +50,16 @@ ActiveRecord::Schema.define(version: 20151103003053) do
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
+
+  create_table "tokens", force: true do |t|
+    t.string   "token"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tokens", ["token"], name: "index_tokens_on_token", unique: true, using: :btree
+  add_index "tokens", ["user_id"], name: "index_tokens_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

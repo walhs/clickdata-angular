@@ -7,18 +7,13 @@
 		.controller('HeaderCtrl', HeaderCtrl);
 
 	HeaderCtrl.$inject = [
-		'AuthService',
-		'$location'
+		'HeaderService',
+		'AuthService'
 	];
 
-	function HeaderCtrl (AuthService, $location) {
+	function HeaderCtrl (HeaderService, AuthService) {
 		var vc = this;
 		vc.auth = AuthService;
-
-		// Lugar errado - @Refactoring
-		vc.logout = function(){
-			vc.auth.logout();
-			$location.path('#/');
-		}
+		vc.vm = HeaderService;
 	}
 })();

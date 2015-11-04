@@ -46,3 +46,7 @@ https://github.com/cloudspace/angular_devise
 
 ### Stop postgres mac ox
 * pg_ctl -D /usr/local/var/postgres stop -s -m fast
+
+### Add token model
+* rails generate model Token token:string user:references
+* rails generate controller Tokens --skip-assets --skip-template-engine

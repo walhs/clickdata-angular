@@ -3,10 +3,11 @@ angular
 	.factory('saveClickDataService', saveClickDataService);
 
 saveClickDataService.$inject = [
-	'clickDataApi'
+	'clickDataApi',
+	'TokenService'
 ]
 
-function saveClickDataService(clickDataApi) {
+function saveClickDataService(clickDataApi, TokenService) {
 	var vm = {
 		save: save
 	};
@@ -15,7 +16,7 @@ function saveClickDataService(clickDataApi) {
 
 	function save(gatilho) {
 		var clickdata = {
-			user_token: "blablabla123",
+			token_id: TokenService.currentToken.id,
 			x: event.clientX,
 			y: event.clientY,
 			scroll_position: document.body.scrollTop,

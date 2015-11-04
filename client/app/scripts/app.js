@@ -47,6 +47,7 @@ angular.module('trackerApp').config(function ($routeProvider) {
     });
 });
 
-angular.module('trackerApp').run(function(AuthService){
+angular.module('trackerApp').run(function(AuthService, TokenService){
   AuthService.init();
+  TokenService.init();
 });
