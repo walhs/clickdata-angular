@@ -17,16 +17,14 @@
           </tr>
         </thead>
         <tbody>
-					<tr>
-						<td ng-repeat="clickdata in vc.vm.clickDataArray">
-							<td>{{clickdata.id}}</td>
-							<td>{{clickdata.x}}</td>
-							<td>{{clickdata.y}}</td>
-							<td>{{clickdata.scroll_position}}</td>
-							<td>{{clickdata.url}}</td>
-							<td>{{clickdata.gatilho}}</td>
-							<td>{{clickdata.token_id}}</td>
-						</td>
+					<tr ng-repeat="clickdata in vc.vm.clickDataArray">
+						<td>{{clickdata.id}}</td>
+						<td>{{clickdata.x}}</td>
+						<td>{{clickdata.y}}</td>
+						<td>{{clickdata.scroll_position}}</td>
+						<td>{{clickdata.url}}</td>
+						<td>{{clickdata.gatilho}}</td>
+						<td>{{clickdata.token_id}}</td>
 					</tr>
 				</tbody>
 			</table>
