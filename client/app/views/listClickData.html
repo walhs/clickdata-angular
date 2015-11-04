@@ -1,9 +1,35 @@
-<h1>ClickData List - {{vc.vm.clickDataArray.length}} </h1>
-
-<ul ng-repeat="clickdata in vc.vm.clickDataArray">
-  <li>{{clickdata.user_token}}</li>
-  <ul>{{clickdata.x}}</ul>
-  <ul>{{clickdata.y}}</ul>
-  <ul>{{clickdata.url}}</ul>
-  <ul>{{clickdata.scroll_position}}</ul>
-</ul>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="page-header">
+      <h2 id="tables">ClickData List</h2>
+    </div>
+    <div class="bs-component">
+      <table class="table table-striped table-hover ">
+        <thead>
+        	<tr>
+	        	<th>#</th>
+	          <th>X</th>
+	          <th>Y</th>
+	          <th>Scroll Position</th>
+	          <th>Url</th>
+	          <th>Gatilho</th>
+	          <th>Token_id</th>
+          </tr>
+        </thead>
+        <tbody>
+					<tr>
+						<td ng-repeat="clickdata in vc.vm.clickDataArray">
+							<td>{{clickdata.id}}</td>
+							<td>{{clickdata.x}}</td>
+							<td>{{clickdata.y}}</td>
+							<td>{{clickdata.scroll_position}}</td>
+							<td>{{clickdata.url}}</td>
+							<td>{{clickdata.gatilho}}</td>
+							<td>{{clickdata.token_id}}</td>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
