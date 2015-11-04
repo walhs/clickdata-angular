@@ -32,7 +32,7 @@
 				</div>
 				<hr class="colorgraph">
 				<div class="form-group">
-					<input gatilho="btn_submit" type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="5" ng-disabled="registerForm.$invalid || registerForm.$dirty === false">
+					<input gatilho="btn_submit" type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="5" ng-disabled="registerForm.$invalid || registerForm.$dirty === false || vc.vm.matchPasword() === false">
 				</div>
 		</form>
 	</div>

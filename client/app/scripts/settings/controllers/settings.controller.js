@@ -5,11 +5,11 @@
     angular.module('trackerApp.settings')
       .controller('SettingsCtrl', SettingsCtrl);
 
-    SettingsCtrl.$inject = ['AuthService'];
+    SettingsCtrl.$inject = ['SettingsService'];
 
-    function SettingsCtrl(AuthService) {
+    function SettingsCtrl(SettingsService) {
         var vc = this;
-        vc.auth = AuthService;
+        vc.vm = SettingsService;
     }
 
 })();
