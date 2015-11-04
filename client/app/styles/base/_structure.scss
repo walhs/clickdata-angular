@@ -1,0 +1,6 @@
+.tracker-app-body {
+    // 50px eh o tamanho do footer e 60px o do header - Soh funciona em navegadores novos
+    // -2px é gambiarra mesmo
+    min-height: calc(100vh - 50px - 60px - 2px);
+    padding-top: 20px;
+}

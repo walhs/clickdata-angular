@@ -12,7 +12,8 @@ angular.module('trackerApp', [
   'trackerApp.header',
   'trackerApp.post',
   'trackerApp.profile',
-  'trackerApp.settings'
+  'trackerApp.settings',
+  'trackerApp.alerts'
 ]);
 
 angular.module('trackerApp').config(function ($routeProvider) {

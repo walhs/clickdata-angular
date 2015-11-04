@@ -25,12 +25,12 @@
 
     <!-- Add your site or application content here -->
     <!--Header-->
+    <alerts></alerts>
     <header></header>
-
 <!--     <div class="container">
     <div ng-view=""></div>
     </div> -->
-      <div class="container-fluid">
+      <div class="container-fluid tracker-app-body">
         <div class="row">
           <div class="col-xs-12 ng-view"></div>
         </div>
@@ -114,6 +114,10 @@
 
         <script src="scripts/settings/settings.module.js"></script>
         <script src="scripts/settings/controllers/settings.controller.js"></script>
+
+        <script src="scripts/alerts/alerts.module.js"></script>
+        <script src="scripts/alerts/directives/alerts.directive.js"></script>
+        <script src="scripts/alerts/services/alerts.service.js"></script>
 
         <script src="scripts/app.js"></script>
         <script src="scripts/main.service.js"></script>

@@ -16,3 +16,6 @@
 /tmp
 
 .idea/
+
+# Mac Os File
+*.DS_Store
