@@ -3,7 +3,8 @@
 
     &.input-error {
         color: $color-error;
-        border-bottom-color: $color-error;
+        // forçando para tela de settings
+        border-bottom-color: $color-error !important;
         @include box-shadow(0 10px 10px -10px rgba($color-error, .5));
     }
 }
