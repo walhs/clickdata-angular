@@ -39,14 +39,6 @@ ActiveRecord::Schema.define(version: 20151103003053) do
   add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
-  create_table "groups", force: true do |t|
-    t.string   "name",       null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "groups", ["name"], name: "index_groups_on_name", unique: true, using: :btree
-
   create_table "posts", force: true do |t|
     t.integer  "upvotes"
     t.datetime "created_at"

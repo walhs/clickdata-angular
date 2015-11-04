@@ -119,6 +119,3 @@ DEPENDENCIES
   responders
   rspec-rails
   spring
-
-BUNDLED WITH
-   1.10.6
