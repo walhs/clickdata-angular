@@ -17,7 +17,7 @@
 
             $timeout(function(){
                 model.closeAlert(alert);
-            }, 3000);
+            }, 2000);
         }
 
         function closeAlert(alert){

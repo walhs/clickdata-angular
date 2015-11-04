@@ -7,7 +7,7 @@
     function alerts (AlertsService) {
         var directive = {
             restrict: "E",
-            templateUrl: 'scripts/alerts/alerts.template.html',
+            templateUrl: 'scripts/alerts/directives/alerts.html',
             replace: true,
             scope:{},
             controller: alertsController,
