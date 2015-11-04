@@ -1,9 +1,14 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
+@import "compass-mixins/lib/_compass.scss";
 // endbower
 
 @import "styles.css";
 @import "properties";
+
+@import "helpers/variables";
+
+@import "components/forms";
 
 .browsehappy {
   margin: 0.2em 0;
