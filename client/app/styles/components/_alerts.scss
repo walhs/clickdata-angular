@@ -1,0 +1,23 @@
+.tracker-app-alerts {
+    width: 100%;
+    top: 10px;
+    position: fixed;
+    z-index: 9999;
+}
+
+.tracker-app-alert {
+    padding: 10px;
+    background-color: $color-warning;
+    color: #333;
+    display: table;
+    margin: 0 auto 10px;
+    clear: both;
+    border-radius: 3px;
+    border: 1px solid lighten($color-warning, 10);
+    position: relative;
+    box-shadow: 0px 0px 5px rgba($color-black, .5);
+
+    .tracker-app-alert-close-icon {
+        cursor: pointer;
+    }
+}

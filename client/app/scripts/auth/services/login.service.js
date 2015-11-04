@@ -6,9 +6,9 @@
       .module('trackerApp.auth')
       .factory('LoginService', LoginService);
 
-      LoginService.$inject = ['AuthService', '$location', 'TokenService'];
+      LoginService.$inject = ['AuthService', '$location', 'TokenService', 'AlertsService'];
 
-      function LoginService(AuthService, $location, TokenService) {
+      function LoginService(AuthService, $location, TokenService, AlertsService) {
           var vm = {
               init: init,
               logIn: logIn,
@@ -25,7 +25,11 @@
                 TokenService.updateToken();
                 $location.path('#/');
             }, function(error) {
-                alert(error.data.error);
+                var alert = {
+                  message: error.data.error,
+                  type: "error"
+                };
+                AlertsService.pushAlert(alert);
             });
           }
       }

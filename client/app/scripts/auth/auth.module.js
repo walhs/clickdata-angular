@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-	angular.module('trackerApp.auth', ['Devise', 'ngCookies']);
+	angular.module('trackerApp.auth', ['Devise', 'ngCookies', 'trackerApp.alerts']);
 
     angular.module('trackerApp.auth').config(function(AuthProvider) {
         AuthProvider.registerPath('http://localhost:3000/users.json');
