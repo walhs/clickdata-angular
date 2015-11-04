@@ -16,7 +16,7 @@
           return vm;
 
           function init(){
-              vm.email = 'email@email.com';
+              vm.email = '';
               vm.password = '';
           }
 
