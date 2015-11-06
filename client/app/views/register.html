@@ -17,9 +17,9 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-6">
 						<div class="form-group">
-							<input gatilho="password" type="password" name="password" id="password" class="form-input form-control input-lg" placeholder="Password" tabindex="3" ng-model="vc.vm.password" ng-minlength="4" ng-maxlength="16" ng-class="{'input-error': registerForm.password.$invalid || vc.vm.matchPasword() === false}">
+							<input gatilho="password" type="password" name="password" id="password" class="form-input form-control input-lg" placeholder="Password" tabindex="3" ng-model="vc.vm.password" ng-minlength="4" ng-maxlength="16" ng-class="{'input-error': registerForm.password_confirmation.$invalid || vc.vm.matchPasword() === false}">
 						</div>
-						<p ng-if="registerForm.password.$invalid || registerForm.password_confirmation.$invalid" class="form-msg form-msg-error">Senha de conter no mínimo 4 e no máximo 16 caracteres</p>
+						<p ng-if="registerForm.password_confirmation.$invalid" class="form-msg form-msg-error">Senha de conter no mínimo 4 e no máximo 16 caracteres</p>
 						<p ng-if="vc.vm.matchPasword() === false" class="form-msg form-msg-error">Senhas não conferem!</p>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-6">

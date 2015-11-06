@@ -62,7 +62,7 @@
 		}
 
         function matchPasword(){
-            if(vm.password || vm.password_confirmation){
+            if(vm.password_confirmation){
                 return vm.password === vm.password_confirmation;
             }
 
