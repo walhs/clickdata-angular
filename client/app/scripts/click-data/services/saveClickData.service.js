@@ -12,6 +12,8 @@ function saveClickDataService(clickDataApi, TokenService) {
 		save: save
 	};
 
+	var lastSavedClickData = {};
+
 	return vm;
 
 	function save(gatilho) {
@@ -27,12 +29,21 @@ function saveClickDataService(clickDataApi, TokenService) {
 			clickdata.gatilho = gatilho;
 		}
 
-		clickDataApi.save(clickdata).then(function(result) {
-			console.log('Save success: ' + result);
-		}, function(err){
-			alert('Error in clickdata saving ');
-			console.error(err);
-		})
+		if(_isNewClickData(clickdata)){
+			lastSavedClickData = clickdata;
+			clickDataApi.save(clickdata).then(function(result) {
+				console.log('Save success: ' + result);
+			}, function(err){
+				alert('Error in clickdata saving ');
+				console.error(err);
+			});
+		}
+	}
+
+	function _isNewClickData(clickdata){
+		return lastSavedClickData.x !== clickdata.x ||
+				lastSavedClickData.y !== clickdata.y ||
+				lastSavedClickData.scroll_position !== clickdata.scroll_position;
 	}
 }
 
