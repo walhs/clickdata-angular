@@ -12,6 +12,7 @@
       restrict: 'E',
       scope: {},
       templateUrl: 'scripts/post/directives/posts.directive.html',
+      bindToController: true,
     };
 
     return directive;
