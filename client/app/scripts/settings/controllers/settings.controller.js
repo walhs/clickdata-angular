@@ -10,6 +10,7 @@
     function SettingsCtrl(SettingsService) {
         var vc = this;
         vc.vm = SettingsService;
+        vc.vm.init();
     }
 
 })();
