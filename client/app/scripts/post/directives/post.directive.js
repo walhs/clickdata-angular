@@ -9,7 +9,8 @@
             restrict: 'E',
             templateUrl: 'scripts/post/directives/post.directive.html',
             scope:{
-                post: '='
+                post: '=',
+                canDelete: 'true'
             },
             // replace: true,
             // controller: 'PostCtrl',

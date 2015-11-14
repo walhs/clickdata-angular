@@ -1,7 +1,7 @@
 <div class="row" ng-cloak>
     <div>
       <div ng-repeat="post in vc.vm.posts" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <post post="post"></post>
+        <post post="post" can-delete="vc.canDelete"></post>
       </div>
     </div>
   </div>

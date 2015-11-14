@@ -10,7 +10,9 @@
       controller: 'PostsCtrl',
       controllerAs: 'vc',
       restrict: 'E',
-      scope: {},
+      scope: {
+        canDelete: 'true'
+      },
       templateUrl: 'scripts/post/directives/posts.directive.html',
       bindToController: true,
     };
