@@ -11,7 +11,7 @@
       controllerAs: 'vc',
       restrict: 'E',
       scope: {
-        canDelete: 'true'
+        canDelete: '='
       },
       templateUrl: 'scripts/post/directives/posts.directive.html',
       bindToController: true,

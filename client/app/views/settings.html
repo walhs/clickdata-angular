@@ -1,6 +1,6 @@
 <div class="col-md-4 col-md-offset-4">
   <div class="well">
-    <form name="settingsForm" role="form" class="settings" ng-submit="vc.vm.update()">
+    <form name="settingsForm" role="form" class="settings" ng-submit="vc.vm.updatePassword()">
 <!--       <div class="form-group">
         <label for="settings__email">Email</label>
         <input type="text" class="form-control" id="settings__email" ng-model="vc.auth.loggedUser.email" placeholder="ex. john@example.com" />
@@ -8,16 +8,16 @@
 
       <div class="form-group">
         <label gatilho="password" for="settings__password">New Password</label>
-        <input type="password" class="form-input form-control" id="settings__password" ng-model="vc.vm.password" placeholder="ex. notgoogleplus" name="password" ng-minlength="4" ng-maxlength="16"
+        <input type="password" class="form-input form-control" id="settings__password" ng-model="vc.vm.new_password" placeholder="ex. notgoogleplus" name="password" ng-minlength="4" ng-maxlength="16"
         ng-class="{'input-error': settingsForm.password.$invalid}"/>
       </div>
 
       <div class="form-group">
         <label gatilho="password_confirmation" for="settings__confirm-password">Confirm Password</label>
-        <input type="password" class="form-input form-control" id="settings__confirm-password" ng-model="vc.vm.password_confirmation" placeholder="ex. notgoogleplus" name="password_confirmation" ng-minlength="4" ng-maxlength="16"
+        <input type="password" class="form-input form-control" id="settings__confirm-password" ng-model="vc.vm.new_password_confirmation" placeholder="ex. notgoogleplus" name="password_confirmation" ng-minlength="4" ng-maxlength="16"
         ng-class="{'input-error': settingsForm.password_confirmation.$invalid}"/>
         <p ng-if="settingsForm.password.$invalid || settingsForm.password_confirmation.$invalid" class="form-msg form-msg-error">Senha de conter no mínimo 4 e no máximo 16 caracteres</p>
-        <p ng-if="vc.vm.matchPasword() === false" class="form-msg form-msg-error">Senhas não conferem!</p>
+        <p ng-if="settingsForm.password_confirmation.valid && vc.vm.matchPasword() === false" class="form-msg form-msg-error">Senhas não conferem!</p>
       </div>
 
 <!--       <div class="form-group">

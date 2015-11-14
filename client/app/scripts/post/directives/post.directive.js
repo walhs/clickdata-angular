@@ -10,7 +10,7 @@
             templateUrl: 'scripts/post/directives/post.directive.html',
             scope:{
                 post: '=',
-                canDelete: 'true'
+                canDelete: '='
             },
             // replace: true,
             // controller: 'PostCtrl',

@@ -48,12 +48,14 @@ class UsersController < ApplicationController
   end
 
   def password
-    user = User.find(params[:user_id])
-    if user
-      user.password = params[:new_password]
-      user.password_confirmation = params[:password_confirmation]
-      user.save
+    @user = User.find(params[:user_id])
+    if @user
+      @user.password = params[:new_password]
+      @user.password_confirmation = params[:password_confirmation]
+      @user.save
     end
+
+    render json: @user
   end
 
   private
