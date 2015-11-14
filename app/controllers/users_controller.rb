@@ -47,6 +47,15 @@ class UsersController < ApplicationController
     head :no_content
   end
 
+  def password
+    user = User.find(params[:user_id])
+    if user
+      user.password = params[:new_password]
+      user.password_confirmation = params[:password_confirmation]
+      user.save
+    end
+  end
+
   private
 
     def set_user

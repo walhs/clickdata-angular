@@ -28,6 +28,7 @@
 #                          PATCH  /api/users/:id(.:format)                          users#update
 #                          PUT    /api/users/:id(.:format)                          users#update
 #                          DELETE /api/users/:id(.:format)                          users#destroy
+#           users_password POST   /api/users/password(.:format)                     users#password
 #                   tokens GET    /api/tokens(.:format)                             tokens#index
 #                          POST   /api/tokens(.:format)                             tokens#create
 #                    token GET    /api/tokens/:id(.:format)                         tokens#show
@@ -56,6 +57,9 @@ Rails.application.routes.draw do
   scope '/api' do
     resources :click_data, except: [:new, :edit]
     resources :users, except: [:new, :edit]
+
+    post '/users/password', to: 'users#password'
+
     resources :tokens, except: [:new, :edit]
 
     resources :posts, except: [:new, :edit] do
