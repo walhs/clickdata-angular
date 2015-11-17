@@ -12,7 +12,8 @@
 			login: login,
 			logout: logout,
 			isUserLogged: isUserLogged,
-			register: register
+			register: register,
+            isCurrentLoggedUser: isCurrentLoggedUser
 		};
 
 	    var config = {
@@ -89,6 +90,14 @@
                 path: '/',
                 expires: new Date(now.getFullYear() + 1, now.getMonth(), now.getDate())
             });
+        }
+
+        function isCurrentLoggedUser(user_id){
+            if(angular.isObject(vm.loggedUser)){
+                return vm.loggedUser.id === user_id;
+            }
+
+            return false;
         }
 	}
 

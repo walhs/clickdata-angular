@@ -4,5 +4,5 @@
     <!-- <p class="profile__tagline">{{ vc.auth.loggedUser.tagline }}</p> -->
   </div>
 
-  <posts can-delete="true"></posts>
+  <posts can-delete="vc.auth.isCurrentLoggedUser(vc.user_id)"></posts>
 </div>
