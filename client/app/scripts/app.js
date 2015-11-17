@@ -48,7 +48,14 @@ angular.module('trackerApp').config(function ($routeProvider) {
     });
 });
 
-angular.module('trackerApp').run(function(AuthService, TokenService){
+angular.module('trackerApp').run(function(AuthService, TokenService, $rootScope, saveClickDataService, $location){
   AuthService.init();
   TokenService.init();
+
+  $rootScope.$on('$routeChangeSuccess', function (angularEvent, currentUrl, previousUrl) {
+      // console.log("currentUrl - " + currentUrl);
+      // console.log("previousUrl - " + previousUrl);
+      // console.log($location.$$path)
+      saveClickDataService.saveUrlChange($location.$$path);
+  });
 });

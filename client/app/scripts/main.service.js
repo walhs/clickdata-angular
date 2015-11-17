@@ -17,7 +17,7 @@
             function init() {
                 vm.posts = [];
                 PostApi.list().success(function(posts){
-                    PostsService.setPosts(posts);
+                    PostsService.init({posts: posts});
                 });
             }
         }
