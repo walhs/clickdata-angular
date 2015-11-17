@@ -50,3 +50,10 @@ https://github.com/cloudspace/angular_devise
 ### Add token model
 * rails generate model Token token:string user:references
 * rails generate controller Tokens --skip-assets --skip-template-engine
+
+### Backup banco Postgres
+* pg_dump fake_lunch_hub_development > bkp_banco_dev
+
+### Restore backup
+* createdb restore_tests
+* psql restore_tests < bkp_banco_dev
