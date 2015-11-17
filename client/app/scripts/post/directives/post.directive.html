@@ -1,8 +1,9 @@
 <div class="row">
   <div class="col-sm-12">
+    <a href ng-if="canDelete" class="close">x</a>
     <div class="well">
       <div class="post">
-        {{ canDelete }}
+        <!-- {{ canDelete }} -->
         <div class="post__meta">
           <a href="#/profile/{{ post.user.id }}">
             +{{ post.user.username }}
