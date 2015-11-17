@@ -23,6 +23,7 @@
             get: get,
             post: post,
             put: put,
+            del: del,
         };
 
         return AppAjax;
@@ -74,6 +75,23 @@
                 method: 'PUT',
                 url: url,
                 data: params
+            });
+            return promise;
+        }
+
+        function del(url, params){
+            if(!params){
+                params = {};
+            }
+
+            if(AuthService.loggedUser){
+                params.user_id = AuthService.loggedUser.id;
+            }
+
+            var promise = $http({
+                method: 'DELETE',
+                url: url,
+                data: $.param(params)
             });
             return promise;
         }
