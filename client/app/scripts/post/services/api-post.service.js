@@ -7,7 +7,7 @@
 
     PostApi.$inject = [
         'AppAjax'
-    ]
+    ];
 
     function PostApi(AppAjax){
         var vm = {
@@ -31,12 +31,12 @@
         }
 
         function upvote(post){
-            var upvote_url = '/posts/' + post.id + '/upvote.json';
+            var upvote_url = '/api/posts/' + post.id + '/upvote.json';
             return AppAjax.post(upvote_url);
         }
 
         function deletePost(post){
-            var delete_url = '/posts/' + post.id + '.json';
+            var delete_url = '/api/posts/' + post.id + '.json';
             return AppAjax.del(delete_url);
         }
     }
