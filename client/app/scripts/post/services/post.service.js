@@ -3,9 +3,9 @@
 
   angular.module('trackerApp.post').factory('PostService', PostService);
 
-  PostService.$inject = ['PostApi', 'AlertsService'];
+  PostService.$inject = ['PostApi', 'AlertsService', 'PostsService'];
 
-  function PostService(PostApi, AlertsService) {
+  function PostService(PostApi, AlertsService, PostsService) {
     var vm = {
         deletePost: deletePost
     };
@@ -14,8 +14,9 @@
 
     function deletePost(post){
         PostApi.deletePost(post).then(function(result){
+            PostsService.removePostFromList(post);
             var alert = {
-              message: 'Post com sucesso.',
+              message: 'Post deletado com sucesso.',
               type: "success"
             };
             AlertsService.pushAlert(alert);
