@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    respond_with Post.all
+    respond_with Post.all.order("created_at DESC")
   end
 
   def create
