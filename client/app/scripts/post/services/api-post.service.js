@@ -13,7 +13,8 @@
         var vm = {
             list: list,
             save: save,
-            upvote: upvote
+            upvote: upvote,
+            deletePost: deletePost
         };
 
         return vm;
@@ -32,6 +33,11 @@
         function upvote(post){
             var upvote_url = '/posts/' + post.id + '/upvote.json';
             return AppAjax.post(upvote_url);
+        }
+
+        function deletePost(post){
+            var delete_url = '/posts/' + post.id + '.json';
+            return AppAjax.del(delete_url);
         }
     }
 })();

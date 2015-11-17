@@ -19,6 +19,10 @@ class PostsController < ApplicationController
     respond_with post
   end
 
+  def destroy
+    respond_with Post.find(params[:id]).delete
+  end
+
   private
   def post_params
     params.require(:post).permit(:text)

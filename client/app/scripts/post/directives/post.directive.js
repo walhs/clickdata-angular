@@ -12,9 +12,10 @@
                 post: '=',
                 canDelete: '='
             },
-            // replace: true,
-            // controller: 'PostCtrl',
-            // controllerAs: 'vc'
+            replace: true,
+            controller: 'PostCtrl',
+            controllerAs: 'vc',
+            bindToController: true,
         }
     }
 })();

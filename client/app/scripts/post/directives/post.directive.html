@@ -1,17 +1,17 @@
 <div class="row">
   <div class="col-sm-12">
-    <a href ng-if="canDelete" class="close">x</a>
+    <a href ng-if="vc.canDelete" class="close">x</a>
     <div class="well">
       <div class="post">
         <!-- {{ canDelete }} -->
         <div class="post__meta">
-          <a href="#/profile/{{ post.user.id }}">
-            +{{ post.user.username }}
+          <a href="#/profile/{{ vc.post.user.id }}">
+            +{{ vc.post.user.username }}
           </a>
         </div>
 
         <div class="post__content">
-          {{ post.text }}
+          {{ vc.post.text }}
         </div>
       </div>
     </div>
