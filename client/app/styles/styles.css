@@ -14,6 +14,11 @@
   text-decoration: none;
 }
 
+.post .post-text {
+  border: none;
+  width: 100%;
+}
+
 .btn-add-new-post {
   position: fixed;
   bottom: 20px;
