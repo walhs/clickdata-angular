@@ -24,7 +24,7 @@
                 vm.user.posts.map(function(p){
                     p.user = user;
                 });
-                PostsService.setPosts(vm.user.posts);
+                PostsService.init({posts: vm.user.posts, user_id: user_id});
             })
         }
     }

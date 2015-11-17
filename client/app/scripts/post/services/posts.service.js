@@ -7,11 +7,16 @@
 
   function PostsService() {
     var vm = {
-      setPosts: setPosts,
+      init: init,
       removePostFromList: removePostFromList
     };
 
     return vm;
+
+    function init(options){
+      setPosts(options.posts);
+      vm.user_id = options.user_id;
+    }
 
     function setPosts(posts) {
         vm.posts = posts;

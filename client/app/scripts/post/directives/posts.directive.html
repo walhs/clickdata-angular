@@ -10,7 +10,7 @@
     <div class="col-sm-12 no-posts-here">
       <em>There are no posts here :(</em>
     </div>
-    <div class="col-sm-12 no-posts-here">
+    <div ng-if="vc.auth.isCurrentLoggedUser(vc.vm.user_id)" class="col-sm-12 no-posts-here">
       <a gatilho="btn_addPost" class="btn btn-primary" href="#/addPost">Add post</a>
     </div>
   </div>

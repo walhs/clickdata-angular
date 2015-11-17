@@ -3,10 +3,11 @@
 
   angular.module('trackerApp.post').controller('PostsCtrl', PostsCtrl);
 
-  PostsCtrl.$inject = ['PostsService'];
+  PostsCtrl.$inject = ['PostsService', 'AuthService'];
 
-  function PostsCtrl(PostsService) {
+  function PostsCtrl(PostsService, AuthService) {
     var vc = this;
     vc.vm = PostsService;
+    vc.auth = AuthService;
   }
 })();
