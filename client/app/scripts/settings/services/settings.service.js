@@ -7,10 +7,11 @@
 
     SettingsService.$inject = [
         'UserApi',
-        'AlertsService'
+        'AlertsService',
+        '$location'
     ];
 
-    function SettingsService(UserApi, AlertsService){
+    function SettingsService(UserApi, AlertsService, $location){
         var vm = {
             init: init,
             matchPasword: matchPasword,
@@ -41,6 +42,7 @@
                     };
                     AlertsService.pushAlert(alert);
                     vm.init();
+                    $location.path("/");
                 }).error(function(){
                     var alert = {
                       message: error.data.error,
