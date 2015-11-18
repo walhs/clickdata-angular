@@ -14,13 +14,15 @@
 	  .controller('RegisterCtrl', RegisterCtrl);
 
 	RegisterCtrl.$inject = [
-		'RegisterService'
+		'RegisterService',
+		'saveClickDataService'
 	];
 
-	function RegisterCtrl(RegisterService){
+	function RegisterCtrl(RegisterService, saveClickDataService){
 		var vc = this;
 		vc.vm = RegisterService;
 		vc.vm.init();
+		vc.saveClickData = saveClickDataService;
 	}
 
 })();

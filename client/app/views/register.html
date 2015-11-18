@@ -5,26 +5,26 @@
 				<hr class="colorgraph">
 				<div class="row">
 				<div class="form-group">
-					<input gatilho="email" type="email" name="email" id="email" class="form-input form-control input-lg" placeholder="Email Address" tabindex="1" ng-model="vc.vm.email"
+					<input ng-focus="vc.saveClickData.save('email_focus')" gatilho="email" type="email" name="email" id="email" class="form-input form-control input-lg" placeholder="Email Address" tabindex="1" ng-model="vc.vm.email"
 					ng-class="{'input-error': registerForm.email.$invalid}">
 					<p ng-if="registerForm.email.$invalid" class="form-msg form-msg-error">Email inválido</p>
 				</div>
 				<div class="form-group">
-					<input gatilho="username" type="text" name="username" id="username" class="form-input form-control input-lg" placeholder="Username" tabindex="2" ng-model="vc.vm.username" ng-minlength="4"
+					<input ng-focus="vc.saveClickData.save('username_focus')" gatilho="username" type="text" name="username" id="username" class="form-input form-control input-lg" placeholder="Username" tabindex="2" ng-model="vc.vm.username" ng-minlength="4"
 					ng-class="{'input-error': registerForm.username.$invalid}">
 					<p ng-if="registerForm.username.$invalid" class="form-msg form-msg-error">Username deve conter no mínimo 4 caracteres</p>
 				</div>
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-6">
 						<div class="form-group">
-							<input gatilho="password" type="password" name="password" id="password" class="form-input form-control input-lg" placeholder="Password" tabindex="3" ng-model="vc.vm.password" ng-minlength="4" ng-maxlength="16" ng-class="{'input-error': registerForm.password_confirmation.$invalid || vc.vm.matchPasword() === false}">
+							<input ng-focus="vc.saveClickData.save('password_focus')" gatilho="password" type="password" name="password" id="password" class="form-input form-control input-lg" placeholder="Password" tabindex="3" ng-model="vc.vm.password" ng-minlength="4" ng-maxlength="16" ng-class="{'input-error': registerForm.password_confirmation.$invalid || vc.vm.matchPasword() === false}">
 						</div>
 						<p ng-if="registerForm.password_confirmation.$invalid" class="form-msg form-msg-error">Senha de conter no mínimo 4 e no máximo 16 caracteres</p>
 						<p ng-if="vc.vm.matchPasword() === false" class="form-msg form-msg-error">Senhas não conferem!</p>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-6">
 						<div class="form-group">
-							<input gatilho="password_confirmation" type="password" name="password_confirmation" id="password_confirmation" class="form-input form-control input-lg" placeholder="Confirm Password" tabindex="4" ng-model="vc.vm.password_confirmation" ng-minlength="4" ng-maxlength="16"
+							<input ng-focus="vc.saveClickData.save('password_confirmation_focus')" gatilho="password_confirmation" type="password" name="password_confirmation" id="password_confirmation" class="form-input form-control input-lg" placeholder="Confirm Password" tabindex="4" ng-model="vc.vm.password_confirmation" ng-minlength="4" ng-maxlength="16"
 							ng-class="{'input-error': registerForm.password_confirmation.$invalid || vc.vm.matchPasword() === false}">
 						</div>
 
@@ -32,7 +32,7 @@
 				</div>
 				<hr class="colorgraph">
 				<div class="form-group">
-					<input gatilho="btn_submit" type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="5" ng-disabled="registerForm.$invalid || registerForm.$dirty === false || vc.vm.matchPasword() === false">
+					<input ng-focus="vc.saveClickData.save('btn_submit_focus')" gatilho="btn_submit" type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="5" ng-disabled="registerForm.$invalid || registerForm.$dirty === false || vc.vm.matchPasword() === false">
 				</div>
 		</form>
 	</div>
