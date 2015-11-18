@@ -4,12 +4,12 @@
       <h2>Log in</h2>
       <hr class="colorgraph">
       <div class="form-group">
-          <input gatilho="email" type="email" name="email_address" id="email_address" class="form-input form-control input-lg" placeholder="Email Address" tabindex="1" ng-model="vc.vm.email"
+          <input ng-focus="vc.saveClickData.save('email_focus')" gatilho="email" type="email" name="email_address" id="email_address" class="form-input form-control input-lg" placeholder="Email Address" tabindex="1" ng-model="vc.vm.email"
           ng-class="{'input-error': formLogin.email_address.$invalid}">
           <p ng-if="formLogin.email_address.$invalid" class="form-msg form-msg-error">Email inválido</p>
         </div>
         <div class="form-group">
-            <input gatilho="password" type="password" name="password" id="password" class="form-input form-control input-lg" placeholder="Password" tabindex="2" ng-model="vc.vm.password" ng-minlength="4" ng-maxlength="16"
+            <input ng-focus="vc.saveClickData.save('password_focus')" gatilho="password" type="password" name="password" id="password" class="form-input form-control input-lg" placeholder="Password" tabindex="2" ng-model="vc.vm.password" ng-minlength="4" ng-maxlength="16"
             ng-class="{'input-error': formLogin.password.$invalid}">
           <p ng-if="formLogin.password.$invalid" class="form-msg form-msg-error">Senha deve conter no mínimo 4 e no máximo 16 caracteres</p>
         </div>
@@ -20,7 +20,7 @@
       </div>
       <hr class="colorgraph">
       <div class="form-group">
-        <input gatilho="btn_login" class="btn btn-lg btn-primary btn-block" type="submit" tabindex="3" value="Log In"
+        <input ng-focus="vc.saveClickData.save('btn_login_focus')" gatilho="btn_login" class="btn btn-lg btn-primary btn-block" type="submit" tabindex="3" value="Log In"
           ng-disabled="formLogin.$invalid || formLogin.$dirty === false">
       </div>
     </form>

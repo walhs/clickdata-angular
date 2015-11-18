@@ -29,6 +29,7 @@ function saveClickDataService(clickDataApi, TokenService) {
 
 		if(gatilho){
 			clickdata.gatilho = gatilho;
+			console.log(gatilho);
 		}
 
 		_saveClickData(clickdata);
