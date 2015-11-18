@@ -4,9 +4,9 @@
       <div class="navbar-header">
         <a gatilho="navbar_tracker" class="navbar-brand" href="#/clickdata/list">Tracker</a>
       </div>
-      <div class="navbar-header" ng-if="vc.auth.isUserLogged() === true">
+<!--       <div class="navbar-header" ng-if="vc.auth.isUserLogged() === true">
         <a class="navbar-brand"> {{ vc.auth.loggedUser.username }}</a>
-      </div>
+      </div> -->
       <div class="collapse navbar-collapse" id="js-navbar-collapse">
         <ul class="nav navbar-nav" ng-if="vc.auth.isUserLogged() === false">
           <li ng-class="{active: vc.route.current.activetab == 'main'}">
