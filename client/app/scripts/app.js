@@ -56,6 +56,8 @@ angular.module('trackerApp').run(function(AuthService, TokenService, $rootScope,
       // console.log("currentUrl - " + currentUrl);
       // console.log("previousUrl - " + previousUrl);
       // console.log($location.$$path)
-      saveClickDataService.saveUrlChange($location.$$path);
+      if(previousUrl){
+        saveClickDataService.saveUrlChange(window.location.href);
+      };
   });
 });
