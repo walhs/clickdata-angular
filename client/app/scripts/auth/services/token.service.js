@@ -27,6 +27,9 @@
             if(!vm.currentToken){
                 vm.renewToken();
             }
+            else{
+                _validateToken(vm.currentToken);
+            }
         }
 
         function updateToken(){
@@ -51,6 +54,17 @@
                 path: '/',
                 expires: new Date(now.getFullYear() + 1, now.getMonth(), now.getDate())
             });
+        }
+
+        function _validateToken(token){
+            TokenApi.getById(token).success(function(token){
+                if(token.token !== vm.currentToken.token){
+                    vm.renewToken();
+                }
+            }).error(function(er){
+                vm.renewToken();
+            });
+
         }
     }
 })();
