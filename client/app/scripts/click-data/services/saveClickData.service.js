@@ -29,7 +29,6 @@ function saveClickDataService(clickDataApi, TokenService) {
 
 		if(gatilho){
 			clickdata.gatilho = gatilho;
-			console.log(gatilho);
 		}
 
 		_saveClickData(clickdata);
@@ -43,7 +42,7 @@ function saveClickDataService(clickDataApi, TokenService) {
 			}
 
 			clickDataApi.save(clickdata).then(function(result) {
-				console.log('Save success: ' + result);
+				console.log('Save success: ' + clickdata.gatilho);
 			}, function(err){
 				alert('Error in clickdata saving ');
 				console.error(err);
@@ -65,9 +64,14 @@ function saveClickDataService(clickDataApi, TokenService) {
 	}
 
 	function _isNewClickData(clickdata){
-		return lastSavedClickData.x !== clickdata.x ||
-				lastSavedClickData.y !== clickdata.y ||
-				lastSavedClickData.scroll_position !== clickdata.scroll_position;
+		if(clickdata.x){
+			return lastSavedClickData.x !== clickdata.x ||
+					lastSavedClickData.y !== clickdata.y ||
+					lastSavedClickData.scroll_position !== clickdata.scroll_position;
+		}
+		else{
+			return true;
+		}
 	}
 }
 
