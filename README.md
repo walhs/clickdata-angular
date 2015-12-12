@@ -67,3 +67,7 @@ ERROR:  role "postgres" does not exist
 * psql postgres
 * CREATE USER postgres SUPERUSER;
 * CREATE DATABASE postgres WITH OWNER postgres;
+
+ERROR:  role "walkirya" does not exist
+* psql postgres
+* CREATE USER walkirya SUPERUSER;
