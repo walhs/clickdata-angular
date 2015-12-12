@@ -57,3 +57,13 @@ https://github.com/cloudspace/angular_devise
 ### Restore backup
 * createdb restore_tests
 * psql restore_tests < bkp_banco_dev
+* psql fake_lunch_hub_development < bkp_gordinha_dev
+
+### ERRO restore
+http://stackoverflow.com/questions/21122598/postgres-user-does-not-exist
+http://stackoverflow.com/questions/15301826/psql-fatal-role-postgres-does-not-exist
+ERROR:  role "postgres" does not exist
+
+* psql postgres
+* CREATE USER postgres SUPERUSER;
+* CREATE DATABASE postgres WITH OWNER postgres;
