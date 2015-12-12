@@ -71,3 +71,7 @@ ERROR:  role "postgres" does not exist
 ERROR:  role "walkirya" does not exist
 * psql postgres
 * CREATE USER walkirya SUPERUSER;
+
+delete from click_data where id = 1;
+
+delete from click_data where url = 'http://localhost:9000/#/%23/';

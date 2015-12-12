@@ -17,28 +17,30 @@ end
 # 4- apagar seu post
 # 5- adicionar um novo post
 
+
 def report_usage
+    report_file = File.new("report.txt", "w")
     user_with_token = User.all
     i = 0
     while i < user_with_token.size
         user_token = user_with_token[i].tokens[0]
         user_clicks = user_token.click_datas
-        puts "User id: #{user_with_token[i].id}"
-        puts "Usuário: #{user_with_token[i].email}"
-        puts "Token: #{user_token.token}"
+        report_file.write("User id: #{user_with_token[i].id}\n")
+        report_file.write("Usuário: #{user_with_token[i].email}\n")
+        report_file.write("Token: #{user_token.token}\n")
         # puts "Clicks: #{user_clicks.size}"
 
-        click_data_offset = report_register(user_clicks)
+        click_data_offset = report_register(user_clicks, report_file)
         # puts "Clicks offset: #{click_data_offset}"
 
         i = i + 1
     end
+
+    report_file.close
 end
 
-def report_register(user_clicks)
-    puts ""
-    puts "Tarefa 1 - Register"
-    puts ""
+def report_register(user_clicks, report_file)
+    report_file.write("\nTarefa 1 - Register\n")
 
     current_click = user_clicks[0]
 
@@ -59,7 +61,7 @@ def report_register(user_clicks)
     while current_click.gatilho != 'url_change' and current_click.url != "http://localhost:9000/#/" and i < user_clicks.size
         case current_click.gatilho
         when "email_focus"
-            puts "Usuário selecionou campo de email"
+            report_file.write("Usuário selecionou campo de email\n")
             next_gatilho = user_clicks[i+1].gatilho
             if next_gatilho == "email"
                 # descarta o próximo gatilho, pois é "email"
@@ -67,7 +69,7 @@ def report_register(user_clicks)
             end
 
         when "username_focus"
-            puts "Usuário selecionou campo de username"
+            report_file.write("Usuário selecionou campo de username")
             next_gatilho = user_clicks[i+1].gatilho
             if next_gatilho == "username"
                 # descarta o próximo gatilho, pois é "username"
@@ -75,7 +77,7 @@ def report_register(user_clicks)
             end
 
         when "password_focus"
-            puts "Usuário selecionou campo de senha"
+            report_file.write("Usuário selecionou campo de senha\n")
             next_gatilho = user_clicks[i+1].gatilho
             if next_gatilho == "password"
                 # descarta o próximo gatilho, pois é "password"
@@ -83,7 +85,7 @@ def report_register(user_clicks)
             end
 
         when "password_confirmation_focus"
-            puts "Usuário selecionou campo de confirmação de senha"
+            report_file.write("Usuário selecionou campo de confirmação de senha\n")
             next_gatilho = user_clicks[i+1].gatilho
             if next_gatilho == "password_confirmation"
                 # descarta o próximo gatilho, pois é "password_confirmation"
@@ -91,7 +93,7 @@ def report_register(user_clicks)
             end
 
         when "btn_submit_focus"
-            puts "Usuário submeteu registro"
+            report_file.write("Usuário submeteu registro\n")
             next_gatilho = user_clicks[i+1].gatilho
             if next_gatilho == "btn_submit"
                 # descarta o próximo gatilho, pois é "password_confirmation"
@@ -113,12 +115,11 @@ def report_register(user_clicks)
         current_click = user_clicks[i]
     end
 
-    puts "Quantidade de clicks nessa tarefa: #{click_count}"
+    report_file.write("Quantidade de clicks nessa tarefa: #{click_count}\n")
 
     url_change_event = current_click
     tempo_tarefa = url_change_event.created_at - navbar_register_click.created_at
-    puts "Tempo de execução: #{tempo_tarefa.to_i} segundos"
-    puts ""
+    report_file.write("Tempo de execução: #{tempo_tarefa.to_i} segundos\n\n")
 
     return i
 end
