@@ -31,6 +31,7 @@ def report_usage
         # puts "Clicks: #{user_clicks.size}"
 
         click_data_offset = report_register(user_clicks, report_file)
+        click_data_offset = report_add_post(user_clicks, report_file, click_data_offset)
         # puts "Clicks offset: #{click_data_offset}"
 
         i = i + 1
@@ -69,7 +70,7 @@ def report_register(user_clicks, report_file)
             end
 
         when "username_focus"
-            report_file.write("Usuário selecionou campo de username")
+            report_file.write("Usuário selecionou campo de username\n")
             next_gatilho = user_clicks[i+1].gatilho
             if next_gatilho == "username"
                 # descarta o próximo gatilho, pois é "username"
@@ -119,6 +120,48 @@ def report_register(user_clicks, report_file)
 
     url_change_event = current_click
     tempo_tarefa = url_change_event.created_at - navbar_register_click.created_at
+    report_file.write("Tempo de execução: #{tempo_tarefa.to_i} segundos\n\n")
+
+    return i
+end
+
+def report_add_post(user_clicks, report_file, click_data_offset)
+    report_file.write("\nTarefa 2 - Adicionar post\n")
+
+    current_click = user_clicks[click_data_offset]
+
+    # loop até gatilho do inicio tarefa
+    i = click_data_offset
+    while current_click.gatilho != 'btn_addPost' and i < user_clicks.size
+        i = i + 1
+        current_click = user_clicks[i]
+    end
+    btn_addPost_click = current_click
+
+    # Descarta evento url_change
+    i = i + 2
+
+    click_count = 0
+    current_click = user_clicks[i]
+    # loop até gatilho da próxima tarefa - Exibe Caminho do usuário
+    while current_click.gatilho != 'url_change' and current_click.url != "http://localhost:9000/#/" and i < user_clicks.size
+        case current_click.gatilho
+        when "textarea"
+            report_file.write("Usuário clicou no campo de texto do post\n")
+
+        when "btn_submit"
+            report_file.write("Usuário submeteu novo post\n")
+        end
+
+        i = i + 1
+        click_count = click_count + 1
+        current_click = user_clicks[i]
+    end
+
+    report_file.write("Quantidade de clicks nessa tarefa: #{click_count}\n")
+
+    url_change_event = current_click
+    tempo_tarefa = url_change_event.created_at - btn_addPost_click.created_at
     report_file.write("Tempo de execução: #{tempo_tarefa.to_i} segundos\n\n")
 
     return i
