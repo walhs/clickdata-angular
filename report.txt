@@ -188,6 +188,7 @@ Tarefa 1
 Usuário clicou em Login
 Usuário clicou em register
 Usuário selecionou campo de email
+Usuário selecionou campo de email
 Usuário selecionou campo de username
 Usuário selecionou campo de senha
 Usuário selecionou campo de confirmação de senha
@@ -499,6 +500,7 @@ Usuário clicou em settings
 Usuário clicou em settings
 Usuário clicou em settings
 Usuário clicou no novo senha
+Usuário selecionou campo de confirmação de senha
 Usuário clicou no confirmação de nova senha
 Usuário submeteu dado
 Quantidade de clicks nessa tarefa: 14

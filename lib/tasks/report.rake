@@ -110,11 +110,13 @@ def report(user_clicks, report_file, click_data_offset, tarefa)
 
         # -> não faz nada - Não preciso tratar porque o email_focus sempre é gerado
         when "email"
+            report_file.write("Usuário selecionou campo de email\n")
         when "password_confirmation"
+            report_file.write("Usuário selecionou campo de confirmação de senha\n")
         when "password"
+            report_file.write("Usuário selecionou campo de senha\n")
         when "username"
-        # when "btn_submit"
-            puts "GATILHO QUE DEVERIA SER DESCONSIDERADO - #{current_click.gatilho}"
+            report_file.write("Usuário selecionou campo de username\n")
 
         when "textarea"
             report_file.write("Usuário clicou no campo de texto do post\n")
