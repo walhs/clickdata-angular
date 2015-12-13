@@ -1,0 +1,572 @@
+User id: 1
+Usuário: carlos.pavanetti@unifesp.br
+Token: EvgKNp6snkfK8nBP7qozkg
+
+Tarefa 1
+Usuário clicou em register
+Usuário selecionou campo de email
+Usuário selecionou campo de username
+Usuário selecionou campo de senha
+Usuário selecionou campo de confirmação de senha
+Usuário submeteu registro
+Quantidade de clicks nessa tarefa: 6
+Tempo de execução: 27 segundos
+
+
+Tarefa 2
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 4
+Tempo de execução: 62 segundos
+
+
+Tarefa 3
+Usuário clicou em profile
+Usuário clicou em profile
+Usuário clicou em profile
+Usuário clicou em profile
+Usuário clicou em home
+Usuário clicou em profile
+Usuário clicou em profile
+Usuário clicou em settings
+Usuário clicou em home
+Usuário clicou em tracker
+Usuário clicou em profile
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/1
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/1
+Usuário clicou em settings
+Usuário clicou no novo senha
+Usuário clicou no confirmação de nova senha
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 17
+Tempo de execução: 54 segundos
+
+
+Tarefa 4
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em profile
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/1
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/1
+Usuário deletou post
+Quantidade de clicks nessa tarefa: 7
+Tempo de execução: 27 segundos
+
+
+Tarefa 5
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/1
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/1
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 5
+Tempo de execução: 19 segundos
+
+User id: 2
+Usuário: kevin.bg012@gmail.com
+Token: JqSueQ72MT3Sb1qzhoqFag
+
+Tarefa 1
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em register
+Usuário selecionou campo de email
+Usuário selecionou campo de username
+Usuário selecionou campo de senha
+Usuário selecionou campo de username
+Usuário selecionou campo de senha
+Usuário selecionou campo de confirmação de senha
+Usuário selecionou campo de senha
+Usuário submeteu registro
+Quantidade de clicks nessa tarefa: 10
+Tempo de execução: 37 segundos
+
+
+Tarefa 2
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/addPost
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 5
+Tempo de execução: 50 segundos
+
+
+Tarefa 3
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/2
+Usuário clicou em settings
+Usuário clicou no novo senha
+Usuário clicou no confirmação de nova senha
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/settings
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 6
+Tempo de execução: 116 segundos
+
+
+Tarefa 4
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/2
+Usuário deletou post
+Quantidade de clicks nessa tarefa: 3
+Tempo de execução: 24 segundos
+
+
+Tarefa 5
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/2
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/2
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/addPost
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 6
+Tempo de execução: 23 segundos
+
+User id: 3
+Usuário: msfranco93@gmail.com
+Token: vMgXAuCTZTVaqKDx71KNlA
+
+Tarefa 1
+Usuário clicou em register
+Usuário selecionou campo de email
+Usuário selecionou campo de username
+Usuário selecionou campo de senha
+Usuário selecionou campo de confirmação de senha
+Usuário submeteu registro
+Quantidade de clicks nessa tarefa: 6
+Tempo de execução: 21 segundos
+
+
+Tarefa 2
+Usuário clicou em home
+Usuário clicou em home
+Usuário clicou em tracker
+Usuário clicou em home
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 7
+Tempo de execução: 58 segundos
+
+
+Tarefa 3
+Usuário clicou em adicionar post
+Usuário clicou em home
+Usuário clicou em settings
+Usuário clicou em profile
+Usuário clicou em settings
+Usuário clicou no novo senha
+Usuário clicou no confirmação de nova senha
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 8
+Tempo de execução: 60 segundos
+
+
+Tarefa 4
+Usuário clicou em home
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/3
+Usuário deletou post
+Quantidade de clicks nessa tarefa: 4
+Tempo de execução: 38 segundos
+
+
+Tarefa 5
+Usuário clicou em home
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 4
+Tempo de execução: 8 segundos
+
+User id: 4
+Usuário: lhgp09@gmail.com
+Token: ll5b3A4I9MNFJ1Qja3GniQ
+
+Tarefa 1
+Usuário clicou em Login
+Usuário clicou em register
+Usuário selecionou campo de email
+Usuário selecionou campo de username
+Usuário selecionou campo de senha
+Usuário selecionou campo de confirmação de senha
+Usuário selecionou campo de senha
+Usuário submeteu registro
+Quantidade de clicks nessa tarefa: 9
+Tempo de execução: 21 segundos
+
+
+Tarefa 2
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 4
+Tempo de execução: 39 segundos
+
+
+Tarefa 3
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário clicou em profile
+Usuário clicou em profile
+Usuário clicou em home
+Usuário clicou em profile
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/4
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/4
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/4
+Usuário clicou em settings
+Usuário clicou no novo senha
+Usuário clicou no confirmação de nova senha
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 13
+Tempo de execução: 103 segundos
+
+
+Tarefa 4
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em home
+Usuário clicou em profile
+Usuário deletou post
+Quantidade de clicks nessa tarefa: 4
+Tempo de execução: 20 segundos
+
+
+Tarefa 5
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/4
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/addPost
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 5
+Tempo de execução: 16 segundos
+
+User id: 5
+Usuário: asd@live.com
+Token: iQ23dLGPTbXDaMVnQjKZsw
+
+Tarefa 1
+Usuário clicou em register
+Usuário selecionou campo de email
+Usuário selecionou campo de username
+Usuário selecionou campo de senha
+Usuário selecionou campo de confirmação de senha
+Usuário submeteu registro
+Quantidade de clicks nessa tarefa: 6
+Tempo de execução: 21 segundos
+
+
+Tarefa 2
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em home
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 5
+Tempo de execução: 26 segundos
+
+
+Tarefa 3
+Usuário clicou em adicionar post
+Usuário clicou em profile
+Usuário clicou em settings
+Usuário clicou no novo senha
+Usuário clicou no confirmação de nova senha
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/settings
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 7
+Tempo de execução: 30 segundos
+
+
+Tarefa 4
+Usuário clicou em home
+Usuário clicou em profile
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/5
+Usuário deletou post
+Quantidade de clicks nessa tarefa: 4
+Tempo de execução: 35 segundos
+
+
+Tarefa 5
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 3
+Tempo de execução: 3 segundos
+
+User id: 6
+Usuário: horus@gmail.com
+Token: XS2xVa9RA9vXr0fMLky4cQ
+
+Tarefa 1
+Usuário clicou em register
+Usuário selecionou campo de email
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/register
+Usuário selecionou campo de email
+Usuário selecionou campo de username
+Usuário selecionou campo de senha
+Usuário selecionou campo de email
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/register
+Usuário clicou em register
+Usuário selecionou campo de email
+Usuário selecionou campo de username
+Usuário selecionou campo de senha
+Usuário selecionou campo de confirmação de senha
+Usuário submeteu registro
+Quantidade de clicks nessa tarefa: 14
+Tempo de execução: 60 segundos
+
+
+Tarefa 2
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 3
+Tempo de execução: 37 segundos
+
+
+Tarefa 3
+Usuário clicou em settings
+Usuário clicou no novo senha
+Usuário clicou no confirmação de nova senha
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 4
+Tempo de execução: 26 segundos
+
+
+Tarefa 4
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/6
+Usuário deletou post
+Quantidade de clicks nessa tarefa: 7
+Tempo de execução: 42 segundos
+
+
+Tarefa 5
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 3
+Tempo de execução: 17 segundos
+
+User id: 7
+Usuário: lll@lll.com
+Token: 2tbwxUg4O3gzsFBnuVgWPA
+
+Tarefa 1
+Usuário clicou em register
+Usuário selecionou campo de email
+Usuário selecionou campo de username
+Usuário selecionou campo de senha
+Usuário selecionou campo de confirmação de senha
+Usuário submeteu registro
+Quantidade de clicks nessa tarefa: 6
+Tempo de execução: 13 segundos
+
+
+Tarefa 2
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 3
+Tempo de execução: 25 segundos
+
+
+Tarefa 3
+Usuário clicou em settings
+Usuário clicou no novo senha
+Usuário clicou no confirmação de nova senha
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 4
+Tempo de execução: 62 segundos
+
+
+Tarefa 4
+Usuário clicou em home
+Usuário clicou em profile
+Usuário deletou post
+Quantidade de clicks nessa tarefa: 3
+Tempo de execução: 37 segundos
+
+
+Tarefa 5
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 3
+Tempo de execução: 5 segundos
+
+User id: 8
+Usuário: gustavo@email.com
+Token: 6zWKdT3nYL3uujdh3il_2A
+
+Tarefa 1
+Usuário clicou em register
+Usuário selecionou campo de email
+Usuário selecionou campo de username
+Usuário selecionou campo de senha
+Usuário selecionou campo de confirmação de senha
+Usuário submeteu registro
+Quantidade de clicks nessa tarefa: 6
+Tempo de execução: 23 segundos
+
+
+Tarefa 2
+Usuário clicou em tracker
+Usuário clicou em home
+Usuário clicou em settings
+Usuário clicou em home
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 7
+Tempo de execução: 63 segundos
+
+
+Tarefa 3
+Usuário clicou em home
+Usuário clicou em settings
+Usuário clicou no novo senha
+Usuário clicou no confirmação de nova senha
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 5
+Tempo de execução: 34 segundos
+
+
+Tarefa 4
+Usuário clicou em profile
+Usuário clicou em home
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em profile
+Usuário deletou post
+Quantidade de clicks nessa tarefa: 6
+Tempo de execução: 41 segundos
+
+
+Tarefa 5
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 3
+Tempo de execução: 5 segundos
+
+User id: 9
+Usuário: jader@hotmail.com
+Token: 1gIyBtMkneIyhbDg7G9pFg
+
+Tarefa 1
+Usuário clicou em register
+Usuário selecionou campo de email
+Usuário selecionou campo de username
+Usuário selecionou campo de senha
+Usuário selecionou campo de confirmação de senha
+Usuário submeteu registro
+Quantidade de clicks nessa tarefa: 6
+Tempo de execução: 27 segundos
+
+
+Tarefa 2
+Usuário clicou em adicionar post
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/addPost
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/addPost
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 4
+Tempo de execução: 35 segundos
+
+
+Tarefa 3
+Usuário clicou em adicionar post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 2
+Tempo de execução: 15 segundos
+
+
+Tarefa 4
+Usuário clicou em home
+Usuário clicou em tracker
+Usuário clicou em home
+Usuário clicou em settings
+Usuário clicou no novo senha
+Usuário clicou no confirmação de nova senha
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/settings
+Usuário clicou em settings
+Usuário clicou em settings
+Usuário clicou em settings
+Usuário clicou no novo senha
+Usuário clicou no confirmação de nova senha
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 14
+Tempo de execução: 136 segundos
+
+
+Tarefa 5
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/9
+Usuário deletou post
+Quantidade de clicks nessa tarefa: 2
+Tempo de execução: 57 segundos
+
+User id: 10
+Usuário: 222@222.com
+Token: AZaZX6_-8XInw-gB-yTIlQ
+
+Tarefa 1
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em register
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/register
+Usuário selecionou campo de email
+Usuário selecionou campo de username
+Usuário selecionou campo de senha
+Usuário submeteu registro
+Quantidade de clicks nessa tarefa: 7
+Tempo de execução: -25 segundos
+
+
+Tarefa 2
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em adicionar post
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/addPost
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/addPost
+Usuário clicou no campo de texto do post
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 6
+Tempo de execução: 43 segundos
+
+
+Tarefa 3
+Usuário clicou em profile
+Usuário clicou em profile
+Usuário clicou em profile
+Usuário clicou em profile
+Usuário clicou em settings
+Usuário clicou no novo senha
+Usuário clicou no confirmação de nova senha
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/settings
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 9
+Tempo de execução: 30 segundos
+
+
+Tarefa 4
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/profile/10
+Usuário deletou post
+Quantidade de clicks nessa tarefa: 5
+Tempo de execução: 37 segundos
+
+
+Tarefa 5
+Usuário clicou em adicionar post
+Usuário clicou no campo de texto do post
+Usuário clicou em um lugar sem gatilho - http://localhost:9000/#/addPost
+Usuário submeteu dado
+Quantidade de clicks nessa tarefa: 4
+Tempo de execução: 7 segundos
+
