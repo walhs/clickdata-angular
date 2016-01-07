@@ -75,3 +75,14 @@ ERROR:  role "walkirya" does not exist
 delete from click_data where id = 1;
 
 delete from click_data where url = 'http://localhost:9000/#/%23/';
+
+### Diagramas
+http://railroad.rubyforge.org/
+* gem install railroad
+* brew install graphviz
+
+Deu ruim o railroad:
+* https://github.com/preston/railroady - Adiciona no Gemfile
+* brew install graphviz
+* sobe o banco e roda
+* rake diagram:all
